@@ -1,24 +1,28 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.InputSystem;
 
 [RequireComponent(typeof(Rigidbody2D))]
-public class PlayerMovementOld : MonoBehaviour
+public class PlayerMovement : MonoBehaviour
 {
 
     [Header("Running")]
     public bool canRun = true;
-    public int direction = 1;
     public float maxSpeed = 7;
     public float acceleration = 500;
     public float decceleration = 800;
     public float airDecceleration = 100;
+    [System.NonSerialized] public float direction = 0;
 
     [Header("Jumping")]
     public bool canJump = true;
     public float jumpHeight = 600;
-    public bool isGrounded;
-    public bool isFalling;
+    [System.NonSerialized] public bool isGrounded;
+    [System.NonSerialized] public bool isFalling;
+    private bool isOverlappingGround;
+    private bool isTouchingGround;
+    private bool jumping;
 
     [Space]
 
@@ -34,7 +38,7 @@ public class PlayerMovementOld : MonoBehaviour
 
     [Space]
 
-    public float groundCheckDistance = 0.47f;
+    public float groundCheckSize = 0.47f;
     public LayerMask groundLayer;
 
     Rigidbody2D playerBody;
@@ -48,38 +52,27 @@ public class PlayerMovementOld : MonoBehaviour
     void FixedUpdate() {
         Checks();
 
-        if (canRun)
-        {
-            RunControls();
-        }
+        if (canRun) Run(direction);
         if (canJump)
         {
-            JumpControls();
+            if (isGrounded)
+            {
+                coyoteTimeCounter = coyoteTime;
+            } else {
+                coyoteTimeCounter -= Time.deltaTime;
+            }
+
+            if (jumping)
+            {
+                if (coyoteTimeCounter > 0 && isGrounded)
+                {
+                    Jump();
+                    coyoteTimeCounter = 0;
+                }
+            }
         }
 
         ExtraFallGravity();
-    }
-
-    private void RunControls() {
-        Run(Input.GetAxisRaw("Horizontal"));
-
-        if (Input.GetAxisRaw("Horizontal") > 0) direction = 1;
-        if (Input.GetAxisRaw("Horizontal") < 0) direction = -1;
-    }
-
-    private void JumpControls() {
-        if (isGrounded)
-        {
-            coyoteTimeCounter = coyoteTime;
-        } else {
-            coyoteTimeCounter -= Time.deltaTime;
-        }
-
-        if (Input.GetButton("Jump") && coyoteTimeCounter > 0)
-        {
-            Jump();
-            coyoteTimeCounter = 0;
-        }
     }
 
     private void Run(float direction) {
@@ -96,7 +89,8 @@ public class PlayerMovementOld : MonoBehaviour
     }
 
     private void Checks() {
-        isGrounded = Physics2D.Raycast(transform.position, Vector2.down, groundCheckDistance, groundLayer);
+        isOverlappingGround = Physics2D.OverlapBox(transform.position, new Vector2(groundCheckSize, 0.05f), 0, groundLayer);
+        isGrounded = isOverlappingGround && isTouchingGround;
         isFalling = playerBody.velocity.y < 0;
     }
 
@@ -110,8 +104,25 @@ public class PlayerMovementOld : MonoBehaviour
         }
     }
 
-    private void OnDrawGizmosSelected() {
-        Gizmos.DrawRay(transform.position, Vector2.down * groundCheckDistance);
+    void OnCollisionEnter2D(Collision2D collision) {
+        if (collision.gameObject.CompareTag("Ground")) isTouchingGround = true;
+    }
+
+    void OnCollisionExit2D(Collision2D collision) {
+        if (collision.gameObject.CompareTag("Ground")) isTouchingGround = false;
+    }
+
+    void OnDrawGizmosSelected() {
+        Gizmos.DrawWireCube(transform.position, new Vector2(groundCheckSize, 0.05f));
+    }
+
+    // Input system
+    void OnMovement(InputValue value) {
+        direction = value.Get<float>();
+    }
+
+    void OnJump(InputValue value) {
+        jumping = value.Get<float>() > 0;
     }
 
 }
