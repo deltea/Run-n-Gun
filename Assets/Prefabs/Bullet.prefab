@@ -13,9 +13,9 @@ GameObject:
   - component: {fileID: 4840048477554843476}
   - component: {fileID: 4840048477554843483}
   - component: {fileID: -7941449278952527284}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Bullet
-  m_TagString: Untagged
+  m_TagString: Bullet
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -83,7 +83,7 @@ CircleCollider2D:
   m_UsedByComposite: 0
   m_Offset: {x: 0, y: 0}
   serializedVersion: 2
-  m_Radius: 0.3
+  m_Radius: 0.37
 --- !u!114 &-7941449278952527284
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -106,7 +106,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4840048477598441127}
   - component: {fileID: 4840048477598441126}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: 9-Sliced
   m_TagString: Untagged
   m_Icon: {fileID: 0}

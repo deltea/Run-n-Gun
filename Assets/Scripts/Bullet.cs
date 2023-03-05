@@ -9,8 +9,9 @@ public class Bullet : MonoBehaviour
         if (collision.gameObject.CompareTag("Ground"))
         {
             Destroy(Instantiate(ParticleManager.Instance.bulletMiss.gameObject, transform.position, Quaternion.identity), 1);
-            Destroy(gameObject);
         }
+        
+        Destroy(gameObject);
     }
 
 }
