@@ -41,6 +41,7 @@ GameObject:
   m_Component:
   - component: {fileID: 9153784561579504923}
   - component: {fileID: 9153784561579504924}
+  - component: {fileID: 6748397147546729279}
   m_Layer: 3
   m_Name: Pistol
   m_TagString: Untagged
@@ -117,6 +118,22 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &6748397147546729279
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 9153784561579504922}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 69a3d0c48b5ac7143899f6f1c7b4369d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  gunKick: 0.3
+  gunKickSmoothing: 0.05
+  gunKickRandomnes: 0.1
+  gunKickRotationRandomness: 60
 --- !u!1 &9153784562253504168
 GameObject:
   m_ObjectHideFlags: 0

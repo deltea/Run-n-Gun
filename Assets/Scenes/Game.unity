@@ -530,9 +530,9 @@ Camera:
   m_NormalizedViewPortRect:
     serializedVersion: 2
     x: 0
-    y: 0
-    width: 1
-    height: 1
+    y: 0.002057613
+    width: 0.99862826
+    height: 0.9958847
   near clip plane: 0.3
   far clip plane: 1000
   field of view: 34
@@ -1058,7 +1058,7 @@ MonoBehaviour:
   gunKickRandomnes: 0.1
   gunKickRotationRandomness: 60
   fireRate: 5
-  fireForce: 20
+  fireForce: 30
   randomness: 5
 --- !u!1001 &960465308
 PrefabInstance:
