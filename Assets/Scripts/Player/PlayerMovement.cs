@@ -24,27 +24,39 @@ public class PlayerMovement : MonoBehaviour
     private bool isTouchingGround;
     private bool jumping;
 
-    [Space]
+    [Header("Better Platforming")]
 
     [Range(0, 0.4f)]
     public float coyoteTime = 0.2f;
     private float coyoteTimeCounter = 0;
 
-    [Space]
+    [Header("Extra Gravity")]
 
     [Range(1, 3)]
     public float fallGravityMultiplier = 2.5f;
     private float normalGravity;
 
-    [Space]
+    [Header("Ground Check")]
 
     public float groundCheckSize = 0.47f;
     public LayerMask groundLayer;
 
+    [Header("Animation")]
+    public Transform graphics;
+    public float tilt = 10;
+    public float tiltSmoothing = 0.2f;
+    public Vector2 landSquash;
+    public Vector2 jumpSquash;
+    public float scaleSmoothing = 0.1f;
+
+    private float targetRotation;
+
+    Vector2 originalScale;
     Rigidbody2D playerBody;
 
     void Start() {
         playerBody = GetComponent<Rigidbody2D>();
+        originalScale = graphics.localScale;
 
         normalGravity = playerBody.gravityScale;
     }
@@ -73,6 +85,9 @@ public class PlayerMovement : MonoBehaviour
         }
 
         ExtraFallGravity();
+        
+        graphics.rotation = Quaternion.Lerp(graphics.rotation, Quaternion.Euler(0, 0, targetRotation), tiltSmoothing);
+        graphics.localScale = Vector2.Lerp(graphics.localScale, originalScale, scaleSmoothing);
     }
 
     private void Run(float direction) {
@@ -86,6 +101,7 @@ public class PlayerMovement : MonoBehaviour
 
     private void Jump() {
         playerBody.AddRelativeForce(Vector2.up * jumpHeight * Time.fixedDeltaTime, ForceMode2D.Impulse);
+        graphics.localScale = originalScale + jumpSquash;
     }
 
     private void Checks() {
@@ -104,8 +120,22 @@ public class PlayerMovement : MonoBehaviour
         }
     }
 
+    private void Land() {
+        if (!jumping)
+        {
+            graphics.localScale = originalScale + landSquash;
+        }
+    }
+
     void OnCollisionEnter2D(Collision2D collision) {
-        if (collision.gameObject.CompareTag("Ground")) isTouchingGround = true;
+        if (collision.gameObject.CompareTag("Ground")) {
+            isTouchingGround = true;
+            Checks();
+            if (isTouchingGround && isOverlappingGround)
+            {
+                Land();
+            }
+        }
     }
 
     void OnCollisionExit2D(Collision2D collision) {
@@ -119,6 +149,7 @@ public class PlayerMovement : MonoBehaviour
     // Input system
     void OnMovement(InputValue value) {
         direction = value.Get<float>();
+        targetRotation = -direction * tilt;
     }
 
     void OnJump(InputValue value) {
