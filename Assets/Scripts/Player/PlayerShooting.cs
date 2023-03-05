@@ -8,9 +8,24 @@ public class PlayerShooting : MonoBehaviour
 
     public Transform gunPivot;
     public Transform gun;
+    public Transform firePoint;
+    public Bullet bulletPrefab;
 
-    void FixedUpdate() {
+    [Header("Gun Stats")]
+    public float fireRate = 5;
+    public float fireForce = 5;
+
+    private bool firing;
+    private float nextTimeToFire;
+
+    void Update() {
         RotateGun();
+
+        if (firing && Time.time >= nextTimeToFire)
+        {
+            nextTimeToFire = Time.time + 1 / fireRate;
+            Fire();
+        }
     }
 
     private void RotateGun() {
@@ -26,6 +41,17 @@ public class PlayerShooting : MonoBehaviour
         {
             gun.localEulerAngles = new Vector3(0, 0, 0);
         }
+    }
+
+    private void Fire() {
+        GameObject bullet = Instantiate(bulletPrefab.gameObject, firePoint.position, gunPivot.rotation);
+        Rigidbody2D bulletBody = bullet.GetComponent<Rigidbody2D>();
+        bulletBody.AddRelativeForce(fireForce * Vector2.up, ForceMode2D.Impulse);
+    }
+
+    // Input system
+    void OnShoot(InputValue value) {
+        firing = value.Get<float>() > 0 ? true : false;
     }
 
 }
