@@ -138,6 +138,10 @@ public class PlayerMovement : MonoBehaviour
         }
     }
 
+    void OnCollisionStay2D(Collision2D collision) {
+        if (collision.gameObject.CompareTag("Ground")) isTouchingGround = true;
+    }
+
     void OnCollisionExit2D(Collision2D collision) {
         if (collision.gameObject.CompareTag("Ground")) isTouchingGround = false;
     }
