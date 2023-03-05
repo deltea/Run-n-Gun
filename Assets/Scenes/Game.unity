@@ -507,11 +507,12 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 588455898}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 1.1, z: 0}
+  m_LocalPosition: {x: 0, y: 1.15, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 199668841}
+  - {fileID: 1521515951}
   m_Father: {fileID: 1364247155}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -840,6 +841,10 @@ MonoBehaviour:
   gun: {fileID: 588455899}
   firePoint: {fileID: 1521515951}
   bulletPrefab: {fileID: -7941449278952527284, guid: 4c2514791c784c24e8ad74e5b7e42f37, type: 3}
+  gunKick: 0.3
+  gunKickSmoothing: 0.05
+  gunKickRandomnes: 0.1
+  gunKickRotationRandomness: 60
   fireRate: 5
   fireForce: 20
 --- !u!1 &1332934652
@@ -1004,7 +1009,6 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 588455899}
-  - {fileID: 1521515951}
   m_Father: {fileID: 941296730}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -1164,12 +1168,12 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1521515950}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 1.451, z: 0}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0.33, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 1364247155}
+  m_Father: {fileID: 588455899}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1639759997
