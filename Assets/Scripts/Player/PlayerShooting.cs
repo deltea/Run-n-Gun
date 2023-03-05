@@ -18,6 +18,7 @@ public class PlayerShooting : MonoBehaviour
     [Header("Gun Stats")]
     public float fireRate = 5;
     public float fireForce = 5;
+    public float randomness = 5;
 
     private bool firing;
     private float nextTimeToFire;
@@ -59,7 +60,7 @@ public class PlayerShooting : MonoBehaviour
     }
 
     private void Fire() {
-        GameObject bullet = Instantiate(bulletPrefab.gameObject, firePoint.position, gunPivot.rotation);
+        GameObject bullet = Instantiate(bulletPrefab.gameObject, firePoint.position, gunPivot.rotation * Quaternion.Euler(0, 0, Random.Range(-randomness, randomness)));
         Rigidbody2D bulletBody = bullet.GetComponent<Rigidbody2D>();
         bulletBody.AddRelativeForce(fireForce * Vector2.up, ForceMode2D.Impulse);
 
