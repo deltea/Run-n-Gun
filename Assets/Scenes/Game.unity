@@ -875,7 +875,7 @@ Transform:
   - {fileID: 960465309}
   - {fileID: 233361513}
   m_Father: {fileID: 0}
-  m_RootOrder: 7
+  m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &941296729
 GameObject:
@@ -913,7 +913,7 @@ Transform:
   - {fileID: 1639759998}
   - {fileID: 1364247155}
   m_Father: {fileID: 0}
-  m_RootOrder: 5
+  m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!50 &941296731
 Rigidbody2D:
@@ -960,7 +960,7 @@ MonoBehaviour:
   groundCheckSize: 0.9
   groundLayer:
     serializedVersion: 2
-    m_Bits: 64
+    m_Bits: 1088
   graphics: {fileID: 1639759998}
   tilt: 15
   tiltSmoothing: 0.15
@@ -1631,7 +1631,7 @@ Transform:
   m_ConstrainProportionsScale: 1
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 6
+  m_RootOrder: 7
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!212 &1546057227
 SpriteRenderer:
@@ -1734,6 +1734,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0096d2ba8510e7a46b10b80f5d30ec00, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  maxHealth: 100
+  health: 100
 --- !u!114 &1546057231
 MonoBehaviour:
   m_ObjectHideFlags: 0
