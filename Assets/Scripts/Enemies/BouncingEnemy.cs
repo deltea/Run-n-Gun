@@ -44,8 +44,7 @@ public class BouncingEnemy : MonoBehaviour
     }
 
     private void Shoot() {
-        float angle = Mathf.Atan2(-lastVelocity.y, -lastVelocity.x) * Mathf.Rad2Deg - 90;
-        Instantiate(bulletPrefab, transform.position, Quaternion.Euler(angle * Vector3.forward));
+        Instantiate(bulletPrefab, transform.position, Quaternion.LookRotation(Vector3.forward, Quaternion.identity * -lastVelocity));
     }
 
     void OnCollisionEnter2D(Collision2D collision) {
