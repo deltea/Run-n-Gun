@@ -1,12 +1,14 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class PlayerHealth : MonoBehaviour
 {
 
     public int maxHealth = 100;
     public int health = 100;
+    public Slider healthBar;
     
     #region Singleton
     
@@ -18,10 +20,15 @@ public class PlayerHealth : MonoBehaviour
     
     #endregion
 
+    void Start() {
+        UpdateHealthBar();
+    }
+
     public void GetHurt(int damage) {
         TimeManager.Instance.Hitstop(0.08f);
 
         health -= damage;
+        UpdateHealthBar();
         if (health <= 0)
         {
             Die();
@@ -30,6 +37,10 @@ public class PlayerHealth : MonoBehaviour
 
     private void Die() {
         print("You died.");
+    }
+
+    private void UpdateHealthBar() {
+        healthBar.value = (float)health / (float)maxHealth;
     }
 
     void OnCollisionEnter2D(Collision2D collision) {
