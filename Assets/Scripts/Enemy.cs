@@ -10,11 +10,22 @@ public class Enemy : MonoBehaviour
     public int coinsDropMin = 3;
     public int coinsDropMax = 6;
     public Coin coinPrefab;
+    public GameObject healthBarPrefab;
+    public float healthBarOffsetY = 1;
 
     Shake camShake;
+    Transform healthBarFill;
+    GameObject healthBar;
+    Shake healthBarShake;
 
     void Start() {
         camShake = Camera.main.GetComponent<Shake>();
+
+        GameObject newHealthBar = Instantiate(healthBarPrefab, transform.position + Vector3.up * healthBarOffsetY, Quaternion.identity, transform);
+        healthBar = newHealthBar;
+        healthBarShake = healthBar.GetComponent<Shake>();
+        healthBar.SetActive(false);
+        healthBarFill = healthBar.transform.GetChild(1).transform;
     }
 
     void OnCollisionEnter2D(Collision2D collision) {
@@ -26,6 +37,9 @@ public class Enemy : MonoBehaviour
 
     private void GetHurt(float damage) {
         health -= damage;
+        healthBarFill.localScale = new Vector2((health / maxHealth), 1);
+        healthBar.SetActive(true);
+        healthBarShake.ShakeIt(0.1f, 0.2f);
         if (health <= 0)
         {
             Die();
