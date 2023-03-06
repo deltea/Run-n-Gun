@@ -24,6 +24,7 @@ public class Coin : MonoBehaviour
 
     private void Collect() {
         Destroy(gameObject);
+        CoinManager.Instance.GainCoins(1);
     }
 
 }
