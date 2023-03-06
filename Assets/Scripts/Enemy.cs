@@ -7,6 +7,9 @@ public class Enemy : MonoBehaviour
 
     public float maxHealth = 100;
     public float health = 100;
+    public int coinsDropMin = 3;
+    public int coinsDropMax = 6;
+    public Coin coinPrefab;
 
     Shake camShake;
 
@@ -34,7 +37,13 @@ public class Enemy : MonoBehaviour
 
     private void Die() {
         camShake.ShakeIt(0.2f, 0.3f);
+        TimeManager.Instance.Hitstop(0.05f);
         Destroy(gameObject);
+
+        for (int i = 0; i < Random.Range(coinsDropMin, coinsDropMax); i++)
+        {
+            Instantiate(coinPrefab.gameObject, transform.position, Quaternion.Euler(0, 0, Random.Range(-90, 90)));
+        }
     }
 
 }
