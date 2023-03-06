@@ -850,9 +850,9 @@ Camera:
   m_NormalizedViewPortRect:
     serializedVersion: 2
     x: 0
-    y: 0
-    width: 1
-    height: 1
+    y: 0.002057613
+    width: 0.99999994
+    height: 0.9958847
   near clip plane: 0.3
   far clip plane: 1000
   field of view: 34
@@ -1123,7 +1123,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 3
+  m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &640560929
 GameObject:
@@ -2480,7 +2480,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1375192090}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 3.6815975, y: 2.8275878, z: -0.0108148465}
+  m_LocalPosition: {x: 3.6815975, y: 8.077588, z: -0.0108148465}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -2513,10 +2513,17 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 67eb1c44873816546b69fdeafd33fd4d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 1
-  abovePlayerOffset: 5
+  speed: 0.2
+  abovePlayerOffset: 3
   bulletPrefab: {fileID: -4706764990558245476, guid: 230023d2d45fedb4989dba292c65bf49, type: 3}
-  delay: 1
+  delay: 1.5
+  groupDelay: 0.2
+  alerted: 0
+  alertRange: 7
+  group: 3
+  playerLayer:
+    serializedVersion: 2
+    m_Bits: 8
 --- !u!114 &1375192094
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2899,7 +2906,7 @@ Transform:
   m_Children:
   - {fileID: 964378781}
   m_Father: {fileID: 0}
-  m_RootOrder: 8
+  m_RootOrder: 9
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &1644592645
 MonoBehaviour:
@@ -3307,5 +3314,5 @@ Transform:
   - {fileID: 1130235312}
   - {fileID: 459752095}
   m_Father: {fileID: 0}
-  m_RootOrder: 5
+  m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
