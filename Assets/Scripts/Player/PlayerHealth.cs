@@ -25,7 +25,7 @@ public class PlayerHealth : MonoBehaviour
     }
 
     public void GetHurt(int damage) {
-        TimeManager.Instance.Hitstop(0.08f);
+        // TimeManager.Instance.Hitstop(0.08f);
 
         health -= damage;
         UpdateHealthBar();

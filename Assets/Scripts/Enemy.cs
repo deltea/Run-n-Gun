@@ -17,9 +17,11 @@ public class Enemy : MonoBehaviour
     Transform healthBarFill;
     GameObject healthBar;
     Shake healthBarShake;
+    SpriteGraphics[] graphicsRenderers;
 
     void Start() {
         camShake = Camera.main.GetComponent<Shake>();
+        graphicsRenderers = GetComponentsInChildren<SpriteGraphics>();
 
         GameObject newHealthBar = Instantiate(healthBarPrefab, transform.position + Vector3.up * healthBarOffsetY, Quaternion.identity, transform);
         healthBar = newHealthBar;
@@ -37,6 +39,7 @@ public class Enemy : MonoBehaviour
 
     private void GetHurt(float damage) {
         health -= damage;
+        RenderHurt();
         healthBarFill.localScale = new Vector2((health / maxHealth), 1);
         healthBar.SetActive(true);
         healthBarShake.ShakeIt(0.1f, 0.2f);
@@ -58,6 +61,14 @@ public class Enemy : MonoBehaviour
         for (int i = 0; i < Random.Range(coinsDropMin, coinsDropMax); i++)
         {
             Instantiate(coinPrefab.gameObject, transform.position, Quaternion.Euler(0, 0, Random.Range(-90, 90)));
+        }
+    }
+
+    private void RenderHurt() {
+        foreach (SpriteGraphics graphic in graphicsRenderers)
+        {
+            graphic.Flash();
+            graphic.Bump();
         }
     }
 
