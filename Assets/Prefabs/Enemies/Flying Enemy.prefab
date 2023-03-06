@@ -135,7 +135,7 @@ MonoBehaviour:
   delay: 1.5
   groupDelay: 0.2
   alerted: 0
-  alertRange: 8
+  alertRange: 100
   group: 3
   wingFlapSmoothing: 0.01
   wingFlapRotation: -30

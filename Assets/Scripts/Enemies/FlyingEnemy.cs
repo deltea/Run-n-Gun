@@ -68,7 +68,7 @@ public class FlyingEnemy : MonoBehaviour
 
     }
 
-    void OnDrawGizmos() {
+    void OnDrawGizmosSelected() {
         Gizmos.DrawWireSphere(transform.position, alertRange);
     }
 
