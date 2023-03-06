@@ -169,8 +169,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0096d2ba8510e7a46b10b80f5d30ec00, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  maxHealth: 80
-  health: 80
+  maxHealth: 100
+  health: 100
   coinsDropMin: 3
   coinsDropMax: 6
   coinPrefab: {fileID: -1368684320886527846, guid: 0166670fa209dc4419f73ef578d73d87, type: 3}
