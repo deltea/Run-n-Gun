@@ -25,7 +25,7 @@ public class Enemy : MonoBehaviour
         healthBar = newHealthBar;
         healthBarShake = healthBar.GetComponent<Shake>();
         healthBar.SetActive(false);
-        healthBarFill = healthBar.transform.GetChild(1).transform;
+        healthBarFill = healthBar.transform.GetChild(0).transform;
     }
 
     void OnCollisionEnter2D(Collision2D collision) {

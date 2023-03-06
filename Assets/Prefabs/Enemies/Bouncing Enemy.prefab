@@ -99,7 +99,7 @@ GameObject:
   - component: {fileID: 3849456647287421718}
   m_Layer: 9
   m_Name: Bouncing Enemy
-  m_TagString: Untagged
+  m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -192,3 +192,6 @@ MonoBehaviour:
   smoothing: 0.02
   bumpScale: 1
   graphics: {fileID: 6738181058859092597}
+  bulletPrefab: {fileID: -4706764990558245476, guid: 230023d2d45fedb4989dba292c65bf49, type: 3}
+  delay: 0.5
+  pause: 0.2
