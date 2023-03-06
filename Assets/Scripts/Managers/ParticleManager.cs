@@ -6,6 +6,7 @@ public class ParticleManager : MonoBehaviour
 {
 
     public ParticleSystem bulletMiss;
+    public ParticleSystem enemySplat;
 
     #region Singleton
     
@@ -16,5 +17,12 @@ public class ParticleManager : MonoBehaviour
     }
     
     #endregion
+
+    public void PlayParticle(ParticleSystem particles, Vector2 position, Quaternion rotation) {
+        if (particles)
+        {
+            Destroy(Instantiate(particles.gameObject, position, rotation), particles.main.startLifetime.constant);
+        }
+    }
 
 }

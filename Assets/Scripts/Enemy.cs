@@ -52,6 +52,7 @@ public class Enemy : MonoBehaviour
     private void Die() {
         camShake.ShakeIt(0.2f, 0.3f);
         TimeManager.Instance.Hitstop(0.05f);
+        ParticleManager.Instance.PlayParticle(ParticleManager.Instance.enemySplat, transform.position, Quaternion.identity);
         Destroy(gameObject);
 
         for (int i = 0; i < Random.Range(coinsDropMin, coinsDropMax); i++)
