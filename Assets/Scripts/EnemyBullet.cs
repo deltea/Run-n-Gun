@@ -21,8 +21,9 @@ public class EnemyBullet : MonoBehaviour
         {
             PlayerHealth.Instance.GetHurt(damage);
         }
-
+        
         Destroy(gameObject);
+
     }
 
 }
