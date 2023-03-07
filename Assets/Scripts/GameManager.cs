@@ -9,6 +9,11 @@ public class GameManager : MonoBehaviour
     [System.NonSerialized] public int enemyCount;
     [System.NonSerialized] public bool roomCleared = false;
     public GameObject portalPrefab;
+    public GameObject cardPrefab;
+    public GameObject giveUpPrefab;
+    public float cardSpacing = 10;
+
+    FollowCamera followCam;
 
     #region Singleton
     
@@ -26,6 +31,7 @@ public class GameManager : MonoBehaviour
 
     void Start() {
         enemyCount = startingEnemyCount;
+        followCam = Camera.main.GetComponent<FollowCamera>();
         // Spawn enemies
     }
 
@@ -36,6 +42,14 @@ public class GameManager : MonoBehaviour
     
     public void EnterPortal() {
         print("Entered portal.");
+
+        followCam.isFollowing = false;
+        PlayerMovement.Instance.StopMoving();
+        PlayerShooting.Instance.canShoot = false;
+
+        Instantiate(cardPrefab, new Vector2(-cardSpacing, 0), Quaternion.identity);
+        Instantiate(cardPrefab, new Vector2(0, 0), Quaternion.identity);
+        Instantiate(cardPrefab, new Vector2(cardSpacing, 0), Quaternion.identity);
     }
 
     public void RemoveEnemy() {

@@ -54,6 +54,16 @@ public class PlayerMovement : MonoBehaviour
     Vector2 originalScale;
     Rigidbody2D playerBody;
 
+    #region Singleton
+    
+    static public PlayerMovement Instance = null;
+    void Awake() {
+        if (Instance == null) Instance = this;
+        else if (Instance != this) Destroy(gameObject);
+    }
+    
+    #endregion
+
     void Start() {
         playerBody = GetComponent<Rigidbody2D>();
         originalScale = graphics.localScale;
@@ -125,6 +135,12 @@ public class PlayerMovement : MonoBehaviour
         {
             graphics.localScale = originalScale + landSquash;
         }
+    }
+
+    public void StopMoving() {
+        canJump = false;
+        canRun = false;
+        playerBody.velocity = Vector2.zero;
     }
 
     void OnCollisionEnter2D(Collision2D collision) {
