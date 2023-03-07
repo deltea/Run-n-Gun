@@ -128,7 +128,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 67eb1c44873816546b69fdeafd33fd4d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  normalSpeed: 0.6
+  normalSpeed: 0.3
   slowSpeed: 0
   abovePlayerOffset: 3
   bulletPrefab: {fileID: -4706764990558245476, guid: 230023d2d45fedb4989dba292c65bf49, type: 3}

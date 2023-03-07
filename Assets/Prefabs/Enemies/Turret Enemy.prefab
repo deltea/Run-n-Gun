@@ -161,12 +161,12 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   bulletPrefab: {fileID: -4706764990558245476, guid: 230023d2d45fedb4989dba292c65bf49, type: 3}
-  delay: 3
+  delay: 4
   groupDelay: 0
   group: 5
   graphics: {fileID: 7104606576181397823}
   firePoint: {fileID: 7104606576587702762}
-  rotationRange: 45
+  rotationRange: 90
   rotationSmoothing: 0.05
 --- !u!1 &7104606576587702761
 GameObject:
