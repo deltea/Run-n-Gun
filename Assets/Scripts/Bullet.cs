@@ -20,4 +20,11 @@ public class Bullet : MonoBehaviour
         Destroy(gameObject);
     }
 
+    void OnTriggerEnter2D(Collider2D trigger) {
+        if (trigger.CompareTag("Bullet Bounds"))
+        {
+            Destroy(gameObject);
+        }
+    }
+
 }
