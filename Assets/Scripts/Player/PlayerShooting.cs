@@ -24,7 +24,6 @@ public class PlayerShooting : MonoBehaviour
     
     #endregion
 
-
     void Start() {
         currentGun = gun.GetComponent<Gun>();
     }

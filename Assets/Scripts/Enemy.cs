@@ -62,6 +62,8 @@ public class Enemy : MonoBehaviour
         {
             Instantiate(coinPrefab.gameObject, transform.position, Quaternion.Euler(0, 0, Random.Range(-90, 90)));
         }
+
+        GameManager.Instance.RemoveEnemy();
     }
 
     private void RenderHurt() {
