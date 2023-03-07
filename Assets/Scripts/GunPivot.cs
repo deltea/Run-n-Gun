@@ -8,7 +8,7 @@ public class GunPivot : MonoBehaviour
     public Transform player;
     public float smoothing = 0.2f;
 
-    void Update() {
+    void FixedUpdate() {
         transform.position = Vector2.Lerp(transform.position, player.position, smoothing);
     }
 
