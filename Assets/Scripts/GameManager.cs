@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class GameManager : MonoBehaviour
 {
@@ -9,9 +10,6 @@ public class GameManager : MonoBehaviour
     [System.NonSerialized] public int enemyCount;
     [System.NonSerialized] public bool roomCleared = false;
     public GameObject portalPrefab;
-    public GameObject cardPrefab;
-    public GameObject giveUpPrefab;
-    public float cardSpacing = 10;
 
     FollowCamera followCam;
 
@@ -47,9 +45,7 @@ public class GameManager : MonoBehaviour
         PlayerMovement.Instance.StopMoving();
         PlayerShooting.Instance.canShoot = false;
 
-        Instantiate(cardPrefab, new Vector2(-cardSpacing, 0), Quaternion.identity);
-        Instantiate(cardPrefab, new Vector2(0, 0), Quaternion.identity);
-        Instantiate(cardPrefab, new Vector2(cardSpacing, 0), Quaternion.identity);
+        SceneManager.LoadScene("Swirly");
     }
 
     public void RemoveEnemy() {
