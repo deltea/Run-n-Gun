@@ -10,5 +10,4 @@ public class GiveUp : MonoBehaviour, IPointerClickHandler
         GameManager.Instance.GiveUp();
     }
 
-
 }
