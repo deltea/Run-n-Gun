@@ -246,6 +246,7 @@ GameObject:
   - component: {fileID: 8973998270352164020}
   - component: {fileID: 8973998270352163915}
   - component: {fileID: 8973998270352163913}
+  - component: {fileID: 902642714}
   m_Layer: 0
   m_Name: Main Camera
   m_TagString: MainCamera
@@ -292,9 +293,9 @@ Camera:
   m_NormalizedViewPortRect:
     serializedVersion: 2
     x: 0
-    y: 0
-    width: 1
-    height: 1
+    y: 0.002057613
+    width: 0.99999994
+    height: 0.9958847
   near clip plane: 0.3
   far clip plane: 1000
   field of view: 34
@@ -392,3 +393,18 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   shakeMode: 1
+--- !u!114 &902642714
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8973998270352164022}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f013f7f8a2aa38a4f88348765a1792be, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  isFollowing: 1
+  smoothing: 0.1
+  bounds: {x: 31, y: 20}

@@ -45,7 +45,15 @@ public class GameManager : MonoBehaviour
         PlayerMovement.Instance.StopMoving();
         PlayerShooting.Instance.canShoot = false;
 
-        SceneManager.LoadScene("Swirly");
+        SceneManager.LoadScene("Choosing");
+    }
+
+    public void ChooseCard() {
+        print("Chosen card.");
+    }
+
+    public void GiveUp() {
+        print("Gave up.");
     }
 
     public void RemoveEnemy() {
