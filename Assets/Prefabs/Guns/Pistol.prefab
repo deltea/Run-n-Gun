@@ -42,6 +42,7 @@ GameObject:
   - component: {fileID: 1765644857818703687}
   - component: {fileID: 7562587046235639571}
   - component: {fileID: 5442954308949213059}
+  - component: {fileID: -1686437301942263834}
   m_Layer: 3
   m_Name: Pistol
   m_TagString: Untagged
@@ -140,6 +141,17 @@ MonoBehaviour:
   randomness: 5
   damage: 20
   bulletPrefab: {fileID: -7941449278952527284, guid: 4c2514791c784c24e8ad74e5b7e42f37, type: 3}
+--- !u!210 &-1686437301942263834
+SortingGroup:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1144669758995870482}
+  m_Enabled: 1
+  m_SortingLayerID: 0
+  m_SortingLayer: 0
+  m_SortingOrder: 15
 --- !u!1 &3199841885528925804
 GameObject:
   m_ObjectHideFlags: 0

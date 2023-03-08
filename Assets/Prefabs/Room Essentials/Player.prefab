@@ -162,7 +162,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   canShoot: 1
   gunPivot: {fileID: 7847090540994118262}
-  gun: {fileID: 1066999028212923912}
+  gun: {fileID: 7847090540994118261}
 --- !u!114 &1113226605349164903
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -358,7 +358,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 330468753447701681, guid: 80cb55780130ab1438ad86c013f6d151, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 1.15
+      value: 1.29
       objectReference: {fileID: 0}
     - target: {fileID: 330468753447701681, guid: 80cb55780130ab1438ad86c013f6d151, type: 3}
       propertyPath: m_LocalPosition.z
@@ -396,6 +396,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Machine Gun
       objectReference: {fileID: 0}
+    - target: {fileID: 7830914344909815726, guid: 80cb55780130ab1438ad86c013f6d151, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 80cb55780130ab1438ad86c013f6d151, type: 3}
 --- !u!4 &1066999028212923912 stripped
@@ -420,7 +424,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1447188748195752504, guid: 6144b4de6ae520e43a002b25a72a5679, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 1.373
+      value: 0.89
       objectReference: {fileID: 0}
     - target: {fileID: 1447188748195752504, guid: 6144b4de6ae520e43a002b25a72a5679, type: 3}
       propertyPath: m_LocalPosition.z
@@ -458,6 +462,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Shotgun
       objectReference: {fileID: 0}
+    - target: {fileID: 5420944280635198300, guid: 6144b4de6ae520e43a002b25a72a5679, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 6144b4de6ae520e43a002b25a72a5679, type: 3}
 --- !u!4 &4496055549907343288 stripped
@@ -475,6 +483,10 @@ PrefabInstance:
     - target: {fileID: 1144669758995870482, guid: 881b724bc9e6fba4ea3892ead8c6da40, type: 3}
       propertyPath: m_Name
       value: Pistol
+      objectReference: {fileID: 0}
+    - target: {fileID: 1144669758995870482, guid: 881b724bc9e6fba4ea3892ead8c6da40, type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 1765644857818703687, guid: 881b724bc9e6fba4ea3892ead8c6da40, type: 3}
       propertyPath: m_RootOrder

@@ -95,6 +95,7 @@ GameObject:
   - component: {fileID: 1447188748195752504}
   - component: {fileID: 549694888346534634}
   - component: {fileID: 4191080320480593648}
+  - component: {fileID: 8893958005741866647}
   m_Layer: 3
   m_Name: Shotgun
   m_TagString: Untagged
@@ -193,6 +194,17 @@ MonoBehaviour:
   randomness: 0
   damage: 50
   bulletPrefab: {fileID: -7941449278952527284, guid: 4c2514791c784c24e8ad74e5b7e42f37, type: 3}
+--- !u!210 &8893958005741866647
+SortingGroup:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5420944280635198300}
+  m_Enabled: 1
+  m_SortingLayerID: 0
+  m_SortingLayer: 0
+  m_SortingOrder: 15
 --- !u!1 &7520951115854591914
 GameObject:
   m_ObjectHideFlags: 0

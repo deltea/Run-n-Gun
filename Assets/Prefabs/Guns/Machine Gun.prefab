@@ -126,6 +126,7 @@ GameObject:
   - component: {fileID: 330468753447701681}
   - component: {fileID: 5391589527863071732}
   - component: {fileID: 8156229835476840274}
+  - component: {fileID: -4105883694099455136}
   m_Layer: 3
   m_Name: Machine Gun
   m_TagString: Untagged
@@ -225,6 +226,17 @@ MonoBehaviour:
   randomness: 10
   damage: 10
   bulletPrefab: {fileID: -7941449278952527284, guid: d1f452759dfba354396cb2e151b93ca2, type: 3}
+--- !u!210 &-4105883694099455136
+SortingGroup:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7830914344909815726}
+  m_Enabled: 1
+  m_SortingLayerID: 0
+  m_SortingLayer: 0
+  m_SortingOrder: 15
 --- !u!1 &7864565791853240795
 GameObject:
   m_ObjectHideFlags: 0
