@@ -12,9 +12,9 @@ GameObject:
   - component: {fileID: 2053864233557148090}
   - component: {fileID: 9095314227434879256}
   - component: {fileID: 2053864233557148092}
-  - component: {fileID: -1368684320886527846}
+  - component: {fileID: 4413527660240524}
   m_Layer: 0
-  m_Name: Coin
+  m_Name: Bit
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -125,7 +125,7 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 1
   m_Constraints: 0
---- !u!114 &-1368684320886527846
+--- !u!114 &4413527660240524
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -134,7 +134,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 2053864233557148088}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 05ddcb90dbba1b34488a8b1dd7a6634c, type: 3}
+  m_Script: {fileID: 11500000, guid: c0555547819e2074286bb995c7e5833c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   startForce: 5

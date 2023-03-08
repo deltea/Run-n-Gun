@@ -2,14 +2,14 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class CoinManager : MonoBehaviour
+public class BitManager : MonoBehaviour
 {
 
-    public int coins;
+    public int bits;
 
     #region Singleton
     
-    static public CoinManager Instance = null;
+    static public BitManager Instance = null;
     void Awake() {
         if (Instance == null) Instance = this;
         else if (Instance != this) Destroy(gameObject);
@@ -17,8 +17,8 @@ public class CoinManager : MonoBehaviour
     
     #endregion
     
-    public void GainCoins(int newCoins) {
-        coins += newCoins;
+    public void GainBits(int newBits) {
+        bits += newBits;
     }
 
 }

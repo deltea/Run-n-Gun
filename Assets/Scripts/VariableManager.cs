@@ -7,7 +7,8 @@ public enum Buffs
     SlowerEnemies,
     SlowerEnemyBullets,
     FasterPlayer,
-    HigherJump
+    HigherJump,
+    MoreBits
 }
 
 public enum Nerfs
@@ -15,7 +16,8 @@ public enum Nerfs
     FasterEnemies,
     FasterEnemyBullets,
     SlowerPlayer,
-    LowerJump
+    LowerJump,
+    LessBits
 }
 
 public class VariableManager : MonoBehaviour
@@ -26,6 +28,8 @@ public class VariableManager : MonoBehaviour
     public float enemyBulletSpeed = 8;
     public float playerRunSpeed = 10;
     public float playerJumpHeight = 800;
+    public int bitsDropMin = 3;
+    public int bitsDropMax = 6;
 
     private Dictionary<Buffs, string> buffDescriptions = new Dictionary<Buffs, string>();
     private Dictionary<Nerfs, string> nerfDescriptions = new Dictionary<Nerfs, string>();
@@ -47,11 +51,13 @@ public class VariableManager : MonoBehaviour
         buffDescriptions.Add(Buffs.SlowerEnemyBullets, "Enemy bullets are slower");
         buffDescriptions.Add(Buffs.FasterPlayer, "Player is faster");
         buffDescriptions.Add(Buffs.HigherJump, "Player jumps higher");
+        buffDescriptions.Add(Buffs.MoreBits, "Gain more bits on kill");
 
         nerfDescriptions.Add(Nerfs.FasterEnemies, "Enemies are faster");
         nerfDescriptions.Add(Nerfs.FasterEnemyBullets, "Enemy bullets are faster");
         nerfDescriptions.Add(Nerfs.SlowerPlayer, "Player is slower");
         nerfDescriptions.Add(Nerfs.LowerJump, "Player jumps lower");
+        nerfDescriptions.Add(Nerfs.LessBits, "Gain less bits on kill");
     }
 
     public void RandomBuff(out Buffs buff, out string buffDescription) {
@@ -71,6 +77,11 @@ public class VariableManager : MonoBehaviour
             case Buffs.SlowerEnemyBullets: { enemyBulletSpeed -= 0.5f; break; }
             case Buffs.FasterPlayer: { playerRunSpeed += 2; break; }
             case Buffs.HigherJump: { playerJumpHeight += 100; break; }
+            case Buffs.MoreBits: {
+                bitsDropMin += 1;
+                bitsDropMax += 1;
+                break;
+            }
         }
     }
 
@@ -81,6 +92,11 @@ public class VariableManager : MonoBehaviour
             case Nerfs.FasterEnemyBullets: { enemyBulletSpeed += 0.5f; break; }
             case Nerfs.SlowerPlayer: { playerRunSpeed -= 2; break; }
             case Nerfs.LowerJump: { playerJumpHeight -= 100; break; }
+            case Nerfs.LessBits: {
+                bitsDropMin -= 1;
+                bitsDropMax -= 1;
+                break;
+            }
         }
     }
 

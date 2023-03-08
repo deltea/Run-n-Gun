@@ -7,9 +7,7 @@ public class Enemy : MonoBehaviour
 
     public float maxHealth = 100;
     public float health = 100;
-    public int coinsDropMin = 3;
-    public int coinsDropMax = 6;
-    public Coin coinPrefab;
+    public Bit bitPrefab;
     public GameObject healthBarPrefab;
     public float healthBarOffsetY = 1;
 
@@ -58,9 +56,9 @@ public class Enemy : MonoBehaviour
         ParticleManager.Instance.PlayParticle(ParticleManager.Instance.enemySplat, transform.position, Quaternion.identity);
         Destroy(gameObject);
 
-        for (int i = 0; i < Random.Range(coinsDropMin, coinsDropMax); i++)
+        for (int i = 0; i < Random.Range(VariableManager.Instance.bitsDropMin, VariableManager.Instance.bitsDropMax); i++)
         {
-            Instantiate(coinPrefab.gameObject, transform.position, Quaternion.Euler(0, 0, Random.Range(-90, 90)));
+            Instantiate(bitPrefab.gameObject, transform.position, Quaternion.Euler(0, 0, Random.Range(-90, 90)));
         }
 
         GameManager.Instance.RemoveEnemy();

@@ -133,9 +133,10 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 5876049182645284156}
-  - component: {fileID: 5876049182645284099}
+  - component: {fileID: 2000943661885461028}
+  - component: {fileID: 2029556374}
   m_Layer: 0
-  m_Name: Coin Manager
+  m_Name: Bit Manager
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -156,7 +157,7 @@ Transform:
   m_Father: {fileID: 5876049182009172195}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &5876049182645284099
+--- !u!114 &2000943661885461028
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -165,7 +166,20 @@ MonoBehaviour:
   m_GameObject: {fileID: 5876049182645284157}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e763e84f978051c40b6daa33d60aecbb, type: 3}
+  m_Script: {fileID: 11500000, guid: c720e54d896e03e44b16a8178a61f2a5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  coins: 0
+  bits: 0
+--- !u!114 &2029556374
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5876049182645284157}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c720e54d896e03e44b16a8178a61f2a5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  bits: 0

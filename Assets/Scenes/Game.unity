@@ -590,6 +590,8 @@ MonoBehaviour:
   enemyBulletSpeed: 8
   playerRunSpeed: 10
   playerJumpHeight: 800
+  bitsDropMin: 3
+  bitsDropMax: 6
 --- !u!4 &449125612
 Transform:
   m_ObjectHideFlags: 0
