@@ -2522,6 +2522,11 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 637877539253072706, guid: 1682bb0faca98c84ca673e6451c81046, type: 3}
   m_PrefabInstance: {fileID: 1537970874}
   m_PrefabAsset: {fileID: 0}
+--- !u!4 &1538436405 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 7847090540994118261, guid: f3099e7de3b1dc14386d9ad808309e7d, type: 3}
+  m_PrefabInstance: {fileID: 1113226606018747143}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &1542056190
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -3606,6 +3611,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 1113226605349164888, guid: f3099e7de3b1dc14386d9ad808309e7d, type: 3}
+      propertyPath: gun
+      value: 
+      objectReference: {fileID: 1538436405}
     - target: {fileID: 1113226605349164893, guid: f3099e7de3b1dc14386d9ad808309e7d, type: 3}
       propertyPath: m_RootOrder
       value: 12
@@ -3653,6 +3662,18 @@ PrefabInstance:
     - target: {fileID: 1113226605349164894, guid: f3099e7de3b1dc14386d9ad808309e7d, type: 3}
       propertyPath: m_Name
       value: Player
+      objectReference: {fileID: 0}
+    - target: {fileID: 7010786126058403548, guid: f3099e7de3b1dc14386d9ad808309e7d, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7418639669414366487, guid: f3099e7de3b1dc14386d9ad808309e7d, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8900253010259318304, guid: f3099e7de3b1dc14386d9ad808309e7d, type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: f3099e7de3b1dc14386d9ad808309e7d, type: 3}

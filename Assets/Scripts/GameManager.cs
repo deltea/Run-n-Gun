@@ -7,15 +7,14 @@ public class GameManager : MonoBehaviour
 {
     
     public int startingEnemyCount = 5;
-    [System.NonSerialized] public int enemyCount;
+    public int enemyCount;
     [System.NonSerialized] public bool roomCleared = false;
     public GameObject portalPrefab;
 
     FollowCamera followCam;
-
-    #region Singleton
     
-    static public GameManager Instance = null;
+    static public GameManager Instance = null; 
+
     void Awake() {
         if (Instance == null) {
             Instance = this;
@@ -23,14 +22,8 @@ public class GameManager : MonoBehaviour
         } else if (Instance != this) {
             Destroy(gameObject);
         }
-    }
-    
-    #endregion
 
-    void Start() {
-        enemyCount = startingEnemyCount;
-        followCam = Camera.main.GetComponent<FollowCamera>();
-        // Spawn enemies
+        Reset();
     }
 
     public void ClearedRoom() {
@@ -41,7 +34,8 @@ public class GameManager : MonoBehaviour
     public void EnterPortal() {
         print("Entered portal.");
 
-        followCam.isFollowing = false;
+        Reset();
+        if (followCam != null) followCam.isFollowing = false;
         PlayerMovement.Instance.StopMoving();
         PlayerShooting.Instance.canShoot = false;
 
@@ -50,6 +44,14 @@ public class GameManager : MonoBehaviour
 
     public void ChooseCard() {
         print("Chosen card.");
+        SceneManager.LoadScene("Game");
+    }
+
+    public void Reset() {
+        enemyCount = startingEnemyCount;
+        roomCleared = false;
+        followCam = Camera.main.GetComponent<FollowCamera>();
+        // Spawn enemies
     }
 
     public void GiveUp() {
@@ -58,6 +60,7 @@ public class GameManager : MonoBehaviour
 
     public void RemoveEnemy() {
         enemyCount--;
+        print(enemyCount);
         if (enemyCount <= 0)
         {
             roomCleared = true;
