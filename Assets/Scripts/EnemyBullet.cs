@@ -5,7 +5,6 @@ using UnityEngine;
 public class EnemyBullet : MonoBehaviour
 {
 
-    public float force = 5;
     public int damage = 10;
 
     Rigidbody2D bulletBody;
@@ -13,7 +12,7 @@ public class EnemyBullet : MonoBehaviour
     void Start() {
         bulletBody = GetComponent<Rigidbody2D>();
 
-        bulletBody.AddRelativeForce(Vector2.up * force, ForceMode2D.Impulse);
+        bulletBody.AddRelativeForce(Vector2.up * VariableManager.Instance.enemyBulletSpeed, ForceMode2D.Impulse);
     }
 
     void OnCollisionEnter2D(Collision2D collision) {

@@ -42,7 +42,7 @@ public class Enemy : MonoBehaviour
         RenderHurt();
         healthBarFill.localScale = new Vector2((health / maxHealth), 1);
         healthBar.SetActive(true);
-        healthBarShake.ShakeIt(0.1f, 0.2f);
+        healthBarShake.ShakeIt(0.2f, 0.2f);
         if (health <= 0)
         {
             Die();
@@ -62,6 +62,8 @@ public class Enemy : MonoBehaviour
         {
             Instantiate(coinPrefab.gameObject, transform.position, Quaternion.Euler(0, 0, Random.Range(-90, 90)));
         }
+
+        GameManager.Instance.RemoveEnemy();
     }
 
     private void RenderHurt() {

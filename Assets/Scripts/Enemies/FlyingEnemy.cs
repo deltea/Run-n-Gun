@@ -5,8 +5,6 @@ using UnityEngine;
 public class FlyingEnemy : MonoBehaviour
 {
 
-    public float normalSpeed = 0.2f;
-    public float slowSpeed = 0.05f;
     public float abovePlayerOffset = 1;
     public EnemyBullet bulletPrefab;
     public float delay = 1;
@@ -52,14 +50,14 @@ public class FlyingEnemy : MonoBehaviour
             if (alerted)
             {
                 yield return new WaitForSeconds(delay);
-                speed = slowSpeed;
+                speed = 0;
                 for (int i = 0; i < group; i++)
                 {
                     Vector2 direction = player.position - transform.position;
-                    Instantiate(bulletPrefab.gameObject, transform.position, Quaternion.LookRotation(Vector3.forward, Quaternion.identity * direction));
+                    Instantiate(bulletPrefab.gameObject, transform.position, Quaternion.LookRotation(Vector3.forward, Quaternion.identity * direction.normalized));
                     yield return new WaitForSeconds(groupDelay);
                 }
-                speed = normalSpeed;
+                speed = 3 / VariableManager.Instance.enemySpeed;
             } else
             {
                 yield return null;

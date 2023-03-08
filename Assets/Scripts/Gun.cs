@@ -9,6 +9,7 @@ public class Gun : MonoBehaviour
     public float gunKickSmoothing = 0.2f;
     public float gunKickRandomnes = 0.1f;
     public float gunKickRotationRandomness = 90;
+    public Transform firePoint;
 
     [Header("Stats")]
     public float fireRate = 5;

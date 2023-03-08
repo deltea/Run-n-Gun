@@ -6,9 +6,9 @@ using UnityEngine.InputSystem;
 public class PlayerShooting : MonoBehaviour
 {
 
+    public bool canShoot = true;
     public Transform gunPivot;
     public Transform gun;
-    public Transform firePoint;
     [System.NonSerialized] public Gun currentGun;
 
     private bool firing;
@@ -24,15 +24,15 @@ public class PlayerShooting : MonoBehaviour
     
     #endregion
 
-
     void Start() {
         currentGun = gun.GetComponent<Gun>();
+        gunPivot.parent = null;
     }
 
     void Update() {
         RotateGun();
 
-        if (firing && Time.time >= nextTimeToFire)
+        if (firing && Time.time >= nextTimeToFire && canShoot)
         {
             nextTimeToFire = Time.time + 1 / currentGun.fireRate;
             Fire();
@@ -54,7 +54,7 @@ public class PlayerShooting : MonoBehaviour
     }
 
     private void Fire() {
-        GameObject bullet = Instantiate(currentGun.bulletPrefab.gameObject, firePoint.position, gunPivot.rotation * Quaternion.Euler(0, 0, Random.Range(-currentGun.randomness, currentGun.randomness)));
+        GameObject bullet = Instantiate(currentGun.bulletPrefab.gameObject, currentGun.firePoint.position, gunPivot.rotation * Quaternion.Euler(0, 0, Random.Range(-currentGun.randomness, currentGun.randomness)));
         Rigidbody2D bulletBody = bullet.GetComponent<Rigidbody2D>();
         bulletBody.AddRelativeForce(currentGun.fireForce * Vector2.up, ForceMode2D.Impulse);
         currentGun.Kick();
