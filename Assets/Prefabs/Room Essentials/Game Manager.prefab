@@ -24,7 +24,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1009239939053859030}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
@@ -45,7 +45,5 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   startingEnemyCount: 7
+  enemyCount: 0
   portalPrefab: {fileID: 5785130237107635009, guid: ebff91b21442a294dbf59ced1aa2f2a8, type: 3}
-  cardPrefab: {fileID: 5970304230672366978, guid: f2e017a79889af84bbe40cd70ee6038b, type: 3}
-  giveUpPrefab: {fileID: 0}
-  cardSpacing: 10

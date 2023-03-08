@@ -9,7 +9,6 @@ public class PlayerMovement : MonoBehaviour
 
     [Header("Running")]
     public bool canRun = true;
-    public float maxSpeed = 7;
     public float acceleration = 500;
     public float decceleration = 800;
     public float airDecceleration = 100;
@@ -17,7 +16,6 @@ public class PlayerMovement : MonoBehaviour
 
     [Header("Jumping")]
     public bool canJump = true;
-    public float jumpHeight = 600;
     [System.NonSerialized] public bool isGrounded;
     [System.NonSerialized] public bool isFalling;
     private bool isOverlappingGround;
@@ -101,7 +99,7 @@ public class PlayerMovement : MonoBehaviour
     }
 
     private void Run(float direction) {
-        float targetSpeed = direction * maxSpeed;
+        float targetSpeed = direction * VariableManager.Instance.playerRunSpeed;
         float speedDiff = targetSpeed - playerBody.velocity.x;
         float accelerationRate = (Mathf.Abs(targetSpeed) > 0.01f) ? acceleration : isGrounded ? acceleration : airDecceleration;
         float moveForce = Mathf.Pow(Mathf.Abs(speedDiff) * accelerationRate, 0.96f) * Mathf.Sign(speedDiff);
@@ -110,7 +108,7 @@ public class PlayerMovement : MonoBehaviour
     }
 
     private void Jump() {
-        playerBody.AddRelativeForce(Vector2.up * jumpHeight * Time.fixedDeltaTime, ForceMode2D.Impulse);
+        playerBody.AddRelativeForce(Vector2.up * VariableManager.Instance.playerJumpHeight * Time.fixedDeltaTime, ForceMode2D.Impulse);
         graphics.localScale = originalScale + jumpSquash;
     }
 
