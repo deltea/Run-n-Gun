@@ -645,8 +645,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   enemySpeed: 10
   enemyBulletSpeed: 8
-  playerRunSpeed: 10
-  playerJumpHeight: 800
+  playerRunSpeed: 11
+  playerJumpHeight: 900
   bitsDropMin: 3
   bitsDropMax: 6
 --- !u!4 &449125612

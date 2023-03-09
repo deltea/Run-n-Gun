@@ -1,12 +1,14 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.InputSystem;
 
 public class FollowCamera : MonoBehaviour
 {
 
     public bool isFollowing = true;
     public float smoothing = 0.1f;
+    public float mouseFollow = 1;
     public Vector2 bounds;
 
     Camera cam;
@@ -29,7 +31,10 @@ public class FollowCamera : MonoBehaviour
             x = Mathf.Clamp(x, -bounds.x + halfWidth, bounds.x - halfWidth);
             y = Mathf.Clamp(y, -bounds.y + halfHeight, bounds.y - halfHeight);
 
-            transform.position = new Vector3(x, y, -10);
+            Vector3 mousePosition = Camera.main.ScreenToWorldPoint(Mouse.current.position.ReadValue());
+            Vector3 direction = mousePosition - transform.position;
+
+            transform.position = new Vector3(x, y, -10) + direction.normalized * mouseFollow;
         }
     }
 

@@ -407,4 +407,5 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   isFollowing: 1
   smoothing: 0.1
+  mouseFollow: 0.5
   bounds: {x: 31, y: 20}
