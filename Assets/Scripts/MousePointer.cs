@@ -6,6 +6,9 @@ using UnityEngine.InputSystem;
 public class MousePointer : MonoBehaviour
 {
 
+    public float normalSize = 1;
+    public float clickingSize = 0.5f;
+
     Camera cam;
 
     void Start() {
@@ -17,6 +20,13 @@ public class MousePointer : MonoBehaviour
 
     void Update() {
         transform.position = Vector2.Lerp(transform.position, cam.ScreenToWorldPoint(Mouse.current.position.ReadValue()), 0.5f);
+
+        if (Mouse.current.leftButton.isPressed)
+        {
+            transform.localScale = Vector2.one * clickingSize;
+        } else {
+            transform.localScale = Vector2.one * normalSize;
+        }
     }
 
 }
