@@ -45,9 +45,9 @@ SortingGroup:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 4390058130212121267}
   m_Enabled: 1
-  m_SortingLayerID: 0
-  m_SortingLayer: 0
-  m_SortingOrder: 10
+  m_SortingLayerID: -1764495079
+  m_SortingLayer: 1
+  m_SortingOrder: 0
 --- !u!58 &4390058130212121230
 CircleCollider2D:
   m_ObjectHideFlags: 0
@@ -97,7 +97,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 820a85c5f2585214da6bffec5fdbbc1d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  force: 8
   damage: 10
 --- !u!1 &4390058130893931207
 GameObject:
