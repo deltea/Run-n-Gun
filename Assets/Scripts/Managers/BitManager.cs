@@ -1,11 +1,13 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using TMPro;
 
 public class BitManager : MonoBehaviour
 {
 
     public int bits;
+    public TMP_Text bitText;
 
     #region Singleton
     
@@ -18,7 +20,18 @@ public class BitManager : MonoBehaviour
     #endregion
     
     public void GainBits(int newBits) {
-        bits += newBits;
+        bits += newBits * 5;
+        UpdateCounter();
+    }
+
+    public void UpdateCounter() {
+        string formatted = "";
+        for (int i = 0; i < 5 - bits.ToString().Length; i++)
+        {
+            formatted += "0";
+        }
+        formatted += bits.ToString();
+        bitText.text = formatted;
     }
 
 }

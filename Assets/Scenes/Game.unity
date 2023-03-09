@@ -3871,6 +3871,22 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 7879161526266790787, guid: f0bebd62b15a3f24da80237fcc8d6749, type: 3}
+      propertyPath: orthographic size
+      value: 10.083333
+      objectReference: {fileID: 0}
+    - target: {fileID: 7879161526266790787, guid: f0bebd62b15a3f24da80237fcc8d6749, type: 3}
+      propertyPath: m_NormalizedViewPortRect.y
+      value: 0.002057613
+      objectReference: {fileID: 0}
+    - target: {fileID: 7879161526266790787, guid: f0bebd62b15a3f24da80237fcc8d6749, type: 3}
+      propertyPath: m_NormalizedViewPortRect.width
+      value: 0.99999994
+      objectReference: {fileID: 0}
+    - target: {fileID: 7879161526266790787, guid: f0bebd62b15a3f24da80237fcc8d6749, type: 3}
+      propertyPath: m_NormalizedViewPortRect.height
+      value: 0.9958847
+      objectReference: {fileID: 0}
     - target: {fileID: 7879161526266790796, guid: f0bebd62b15a3f24da80237fcc8d6749, type: 3}
       propertyPath: m_Name
       value: UI Camera
