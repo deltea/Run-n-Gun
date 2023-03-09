@@ -9,7 +9,7 @@ public class CanvasPrefab : MonoBehaviour
 
     void Start() {
         canvas = GetComponent<Canvas>();
-        canvas.worldCamera = Camera.main;
+        canvas.worldCamera = GameObject.FindGameObjectWithTag("UI Camera").GetComponent<Camera>();
     }
 
 }

@@ -9,6 +9,7 @@ TagManager:
   - Enemy Bullet
   - Enemy
   - Bullet Bounds
+  - UI Camera
   layers:
   - Default
   - TransparentFX
