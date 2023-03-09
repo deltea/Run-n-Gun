@@ -9,6 +9,14 @@ public class Gun : MonoBehaviour
     public float gunKickSmoothing = 0.2f;
     public float gunKickRandomnes = 0.1f;
     public float gunKickRotationRandomness = 90;
+    public Transform firePoint;
+
+    [Header("Stats")]
+    public float fireRate = 5;
+    public float fireForce = 30;
+    public float randomness = 5;
+    public float damage = 20;
+    public Bullet bulletPrefab;
 
     Vector2 originalGunPos;
     float originalGunRotation;

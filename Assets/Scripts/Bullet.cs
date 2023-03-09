@@ -5,6 +5,12 @@ using UnityEngine;
 public class Bullet : MonoBehaviour
 {
 
+    [System.NonSerialized] public Gun gun;
+
+    void Start() {
+        gun = PlayerShooting.Instance.currentGun;
+    }
+
     void OnCollisionEnter2D(Collision2D collision) {
         if (collision.gameObject.CompareTag("Ground"))
         {
@@ -12,6 +18,13 @@ public class Bullet : MonoBehaviour
         }
         
         Destroy(gameObject);
+    }
+
+    void OnTriggerEnter2D(Collider2D trigger) {
+        if (trigger.CompareTag("Bullet Bounds"))
+        {
+            Destroy(gameObject);
+        }
     }
 
 }

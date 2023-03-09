@@ -2,17 +2,17 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Coin : MonoBehaviour
+public class Bit : MonoBehaviour
 {
 
     public float startForce = 5;
 
-    Rigidbody2D coinBody;
+    Rigidbody2D bitBody;
 
     void Start() {
-        coinBody = GetComponent<Rigidbody2D>();
+        bitBody = GetComponent<Rigidbody2D>();
 
-        coinBody.AddForce(transform.up * startForce, ForceMode2D.Impulse);
+        bitBody.AddForce(transform.up * startForce, ForceMode2D.Impulse);
     }
 
     void OnTriggerEnter2D(Collider2D trigger) {
@@ -24,7 +24,7 @@ public class Coin : MonoBehaviour
 
     private void Collect() {
         Destroy(gameObject);
-        CoinManager.Instance.GainCoins(1);
+        BitManager.Instance.GainBits(1);
     }
 
 }

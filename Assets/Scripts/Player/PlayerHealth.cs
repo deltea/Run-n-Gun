@@ -8,7 +8,6 @@ public class PlayerHealth : MonoBehaviour
 
     public int maxHealth = 100;
     public int health = 100;
-    public Slider healthBar;
     
     #region Singleton
     
@@ -19,13 +18,16 @@ public class PlayerHealth : MonoBehaviour
     }
     
     #endregion
+    
+    Slider healthBar;
 
     void Start() {
+        healthBar = GameObject.Find("Health Bar").GetComponent<Slider>();
         UpdateHealthBar();
     }
 
     public void GetHurt(int damage) {
-        TimeManager.Instance.Hitstop(0.08f);
+        // TimeManager.Instance.Hitstop(0.08f);
 
         health -= damage;
         UpdateHealthBar();
