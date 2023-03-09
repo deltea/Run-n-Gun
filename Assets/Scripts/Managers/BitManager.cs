@@ -8,6 +8,10 @@ public class BitManager : MonoBehaviour
 
     public int bits;
     public TMP_Text bitText;
+    public float smoothing = 0.2f;
+    public float gainAnimation = 10;
+
+    Vector2 originalPosition;
 
     #region Singleton
     
@@ -19,8 +23,17 @@ public class BitManager : MonoBehaviour
     
     #endregion
     
+    void Start() {
+        originalPosition = bitText.transform.localPosition;
+    }
+
+    void Update() {
+        bitText.transform.localPosition = Vector2.Lerp(bitText.transform.localPosition, originalPosition, smoothing);
+    }
+
     public void GainBits(int newBits) {
         bits += newBits * 5;
+        bitText.transform.localPosition = originalPosition + Vector2.up * gainAnimation;
         UpdateCounter();
     }
 
