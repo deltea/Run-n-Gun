@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 1777183127}
   - component: {fileID: 1777183129}
   - component: {fileID: 1777183128}
+  - component: {fileID: 992944926}
   m_Layer: 5
   m_Name: Bit Text
   m_TagString: Untagged
@@ -135,6 +136,22 @@ MonoBehaviour:
   m_hasFontAssetChanged: 0
   m_baseMaterial: {fileID: 0}
   m_maskOffset: {x: 0, y: 0, z: 0, w: 0}
+--- !u!114 &992944926
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1777183126}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c720e54d896e03e44b16a8178a61f2a5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  bits: 0
+  bitText: {fileID: 1777183128}
+  smoothing: 0.2
+  gainAnimation: 20
 --- !u!1 &954416131010248576
 GameObject:
   m_ObjectHideFlags: 0
@@ -427,7 +444,6 @@ GameObject:
   - component: {fileID: 954416132571352214}
   - component: {fileID: 954416132571352213}
   - component: {fileID: 1258037449}
-  - component: {fileID: 1414522619}
   m_Layer: 5
   m_Name: Canvas
   m_TagString: Untagged
@@ -530,19 +546,3 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4e67e37595028e64fba06310dd6dc7df, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!114 &1414522619
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 954416132571352212}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c720e54d896e03e44b16a8178a61f2a5, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  bits: 0
-  bitText: {fileID: 1777183128}
-  smoothing: 0.2
-  gainAnimation: 20
