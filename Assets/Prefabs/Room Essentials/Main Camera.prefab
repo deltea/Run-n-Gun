@@ -293,18 +293,18 @@ Camera:
   m_NormalizedViewPortRect:
     serializedVersion: 2
     x: 0
-    y: 0.002057613
-    width: 0.99999994
-    height: 0.9958847
+    y: 0
+    width: 0.6584362
+    height: 0.98765427
   near clip plane: 0.3
   far clip plane: 1000
   field of view: 34
   orthographic: 1
   orthographic size: 10.083333
-  m_Depth: -1
+  m_Depth: 0
   m_CullingMask:
     serializedVersion: 2
-    m_Bits: 4294967295
+    m_Bits: 4063
   m_RenderingPath: -1
   m_TargetTexture: {fileID: 0}
   m_TargetDisplay: 0
@@ -407,4 +407,5 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   isFollowing: 1
   smoothing: 0.1
+  mouseFollow: 0.1
   bounds: {x: 31, y: 20}
