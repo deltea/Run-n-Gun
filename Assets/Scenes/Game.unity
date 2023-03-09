@@ -3871,18 +3871,6 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 7879161526266790787, guid: f0bebd62b15a3f24da80237fcc8d6749, type: 3}
-      propertyPath: m_NormalizedViewPortRect.y
-      value: 0.002057613
-      objectReference: {fileID: 0}
-    - target: {fileID: 7879161526266790787, guid: f0bebd62b15a3f24da80237fcc8d6749, type: 3}
-      propertyPath: m_NormalizedViewPortRect.width
-      value: 0.99999994
-      objectReference: {fileID: 0}
-    - target: {fileID: 7879161526266790787, guid: f0bebd62b15a3f24da80237fcc8d6749, type: 3}
-      propertyPath: m_NormalizedViewPortRect.height
-      value: 0.9958847
-      objectReference: {fileID: 0}
     - target: {fileID: 7879161526266790796, guid: f0bebd62b15a3f24da80237fcc8d6749, type: 3}
       propertyPath: m_Name
       value: UI Camera
@@ -3939,18 +3927,6 @@ PrefabInstance:
     - target: {fileID: 8973998270352163914, guid: 64bc0041e78eda34c8794a87fc2a1e56, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 8973998270352164021, guid: 64bc0041e78eda34c8794a87fc2a1e56, type: 3}
-      propertyPath: m_NormalizedViewPortRect.y
-      value: 0.002057613
-      objectReference: {fileID: 0}
-    - target: {fileID: 8973998270352164021, guid: 64bc0041e78eda34c8794a87fc2a1e56, type: 3}
-      propertyPath: m_NormalizedViewPortRect.width
-      value: 0.99999994
-      objectReference: {fileID: 0}
-    - target: {fileID: 8973998270352164021, guid: 64bc0041e78eda34c8794a87fc2a1e56, type: 3}
-      propertyPath: m_NormalizedViewPortRect.height
-      value: 0.9958847
       objectReference: {fileID: 0}
     - target: {fileID: 8973998270352164022, guid: 64bc0041e78eda34c8794a87fc2a1e56, type: 3}
       propertyPath: m_Name
