@@ -37,6 +37,7 @@ public class Bit : MonoBehaviour
                 transform.position.y < bitTextPos.y + range.y
             )
             {
+                BitManager.Instance.GainBits(1);
                 Destroy(gameObject);
             }
         }
@@ -56,8 +57,6 @@ public class Bit : MonoBehaviour
         bitBody.isKinematic = true;
         bitCollider.enabled = false;
         collected = true;
-
-        BitManager.Instance.GainBits(1);
     }
 
 }
