@@ -18,12 +18,14 @@ public class Gun : MonoBehaviour
     public float damage = 20;
     public Bullet bulletPrefab;
 
+    SpriteGraphics[] graphicsRenderers;
     Vector2 originalGunPos;
     float originalGunRotation;
 
     void Start() {
         originalGunPos = transform.localPosition;
         originalGunRotation = transform.localRotation.z;
+        graphicsRenderers = GetComponentsInChildren<SpriteGraphics>();
     }
 
     void Update() {
@@ -34,6 +36,13 @@ public class Gun : MonoBehaviour
     public void Kick() {
         transform.localPosition = originalGunPos + (Vector2.down * gunKick) + Random.insideUnitCircle.normalized * gunKickRandomnes;
         transform.localRotation = Quaternion.Euler(transform.localRotation.x, transform.localRotation.y, Random.Range(-gunKickRotationRandomness, gunKickRotationRandomness));
+    }
+
+    public void Flash() {
+        foreach (SpriteGraphics graphic in graphicsRenderers)
+        {
+            graphic.Flash();
+        }
     }
 
 }

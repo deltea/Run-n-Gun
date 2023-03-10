@@ -58,6 +58,7 @@ public class PlayerShooting : MonoBehaviour
         Rigidbody2D bulletBody = bullet.GetComponent<Rigidbody2D>();
         bulletBody.AddRelativeForce(currentGun.fireForce * Vector2.up, ForceMode2D.Impulse);
         currentGun.Kick();
+        // currentGun.Flash();
     }
 
     // Input system
