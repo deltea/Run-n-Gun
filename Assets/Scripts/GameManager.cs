@@ -49,6 +49,7 @@ public class GameManager : MonoBehaviour
     }
 
     public void Reset() {
+        startingEnemyCount = GameObject.FindObjectsOfType<Enemy>().Length;
         enemyCount = startingEnemyCount;
         roomCleared = false;
         followCam = Camera.main.GetComponent<FollowCamera>();
