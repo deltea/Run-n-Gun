@@ -10,6 +10,7 @@ public class GameManager : MonoBehaviour
     public int enemyCount;
     [System.NonSerialized] public bool roomCleared = false;
     public GameObject portalPrefab;
+    public int rooms = 2;
 
     FollowCamera followCam;
     
@@ -44,7 +45,7 @@ public class GameManager : MonoBehaviour
 
     public void ChooseCard() {
         print("Chosen card.");
-        SceneManager.LoadScene("Game");
+        SceneManager.LoadScene("Room 1-" + Random.Range(0, rooms));
     }
 
     public void Reset() {
