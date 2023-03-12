@@ -8,6 +8,7 @@ public class BouncingEnemy : MonoBehaviour
     public EnemyBullet bulletPrefab;
     public float delay = 5;
     public float pause = 0.5f;
+    public float enemySpeed = 10;
 
     private Vector2 lastVelocity;
 
@@ -17,11 +18,11 @@ public class BouncingEnemy : MonoBehaviour
         enemyBody = GetComponent<Rigidbody2D>();
         
         StartCoroutine(ShootRoutine());
-        enemyBody.AddForce(Random.insideUnitCircle.normalized * VariableManager.Instance.enemySpeed, ForceMode2D.Impulse);
+        enemyBody.AddForce(Random.insideUnitCircle.normalized * enemySpeed, ForceMode2D.Impulse);
     }
 
     void Update() {
-        enemyBody.velocity = enemyBody.velocity.normalized * VariableManager.Instance.enemySpeed;
+        enemyBody.velocity = enemyBody.velocity.normalized * enemySpeed;
     }
 
     private IEnumerator ShootRoutine() {

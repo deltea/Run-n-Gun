@@ -8,9 +8,12 @@ public class Enemy : MonoBehaviour
     public float maxHealth = 100;
     public float health = 100;
     public Bit bitPrefab;
+    public int bitsDropMin = 3;
+    public int bitsDropMax = 6;
     public GameObject healthBarPrefab;
     public float healthBarOffsetY = 1;
 
+    Room room;
     Shake camShake;
     Transform healthBarFill;
     GameObject healthBar;
@@ -18,6 +21,7 @@ public class Enemy : MonoBehaviour
     SpriteGraphics[] graphicsRenderers;
 
     void Start() {
+        room = transform.parent.GetComponentInParent<Room>();
         camShake = Camera.main.GetComponent<Shake>();
         graphicsRenderers = GetComponentsInChildren<SpriteGraphics>();
 
@@ -56,12 +60,12 @@ public class Enemy : MonoBehaviour
         ParticleManager.Instance.PlayParticle(ParticleManager.Instance.enemySplat, transform.position, Quaternion.identity);
         Destroy(gameObject);
 
-        for (int i = 0; i < Random.Range(VariableManager.Instance.bitsDropMin, VariableManager.Instance.bitsDropMax); i++)
+        for (int i = 0; i < Random.Range(bitsDropMin, bitsDropMax); i++)
         {
             Instantiate(bitPrefab.gameObject, transform.position, Quaternion.Euler(0, 0, Random.Range(-90, 90)));
         }
 
-        GameManager.Instance.RemoveEnemy();
+        room.RemoveEnemy();
     }
 
     private void RenderHurt() {
