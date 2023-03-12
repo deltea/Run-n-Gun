@@ -537,7 +537,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1618386388123724882}
   - component: {fileID: 5644499656544353226}
-  m_Layer: 0
+  m_Layer: 12
   m_Name: Room 2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -580,6 +580,10 @@ MonoBehaviour:
   entranceDoor: {fileID: 5130194463691971408}
   exitDoor: {fileID: 4687371781515282849}
   bounds: {fileID: 1618386387600274629}
+  size: {x: 70, y: 45}
+  roomsLayer:
+    serializedVersion: 2
+    m_Bits: 4096
 --- !u!1 &1618386388193865192
 GameObject:
   m_ObjectHideFlags: 0

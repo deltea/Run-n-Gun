@@ -4,6 +4,8 @@ using UnityEngine;
 
 public class RoomsManager : MonoBehaviour
 {
+
+    public int currentRoomNum = 1;
     public GameObject[] roomPrefabs;
 
     #region Singleton
@@ -17,7 +19,8 @@ public class RoomsManager : MonoBehaviour
     #endregion
 
     public void CreateRoom(Room clearedRoom) {
-        GameObject newRoom = Instantiate(roomPrefabs[Random.Range(0, roomPrefabs.Length)], Random.insideUnitCircle.normalized * 1000, Quaternion.identity);
+        currentRoomNum++;
+        GameObject newRoom = Instantiate(roomPrefabs[Random.Range(0, roomPrefabs.Length)], Random.insideUnitCircle.normalized * 200, Quaternion.identity);
         Room room = newRoom.GetComponent<Room>();
 
         Door newEntranceDoor = room.entranceDoor;

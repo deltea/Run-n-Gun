@@ -561,10 +561,10 @@ GameObject:
   m_Component:
   - component: {fileID: 1618386388123724882}
   - component: {fileID: 5644499656544353226}
-  - component: {fileID: 6488587415765030977}
-  m_Layer: 0
+  - component: {fileID: 1712354892}
+  m_Layer: 12
   m_Name: Room 1
-  m_TagString: Untagged
+  m_TagString: Room
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -605,7 +605,11 @@ MonoBehaviour:
   entranceDoor: {fileID: 6463845590402972056}
   exitDoor: {fileID: 9137474789200216086}
   bounds: {fileID: 1618386387600274629}
---- !u!61 &6488587415765030977
+  size: {x: 70, y: 45}
+  roomsLayer:
+    serializedVersion: 2
+    m_Bits: 4096
+--- !u!61 &1712354892
 BoxCollider2D:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -615,7 +619,7 @@ BoxCollider2D:
   m_Enabled: 1
   m_Density: 1
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
   m_Offset: {x: 0, y: 0}
@@ -629,7 +633,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 1, y: 1}
+  m_Size: {x: 70, y: 45}
   m_EdgeRadius: 0
 --- !u!1 &1618386388193865192
 GameObject:

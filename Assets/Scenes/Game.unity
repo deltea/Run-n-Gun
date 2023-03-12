@@ -2944,7 +2944,7 @@ MonoBehaviour:
   airDecceleration: 100
   canJump: 1
   jumpHeight: 800
-  coyoteTime: 0.2
+  coyoteTime: 0.4
   fallGravityMultiplier: 2.5
   groundCheckSize: 0.9
   groundLayer:
