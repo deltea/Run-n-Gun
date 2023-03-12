@@ -334,7 +334,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &447743760
 Transform:
   m_ObjectHideFlags: 0
@@ -381,10 +381,10 @@ MonoBehaviour:
   gunKickRandomnes: 0
   gunKickRotationRandomness: 0
   firePoint: {fileID: 2122229533}
-  fireRate: 5
+  fireRate: 1
   fireForce: 50
   randomness: 0
-  damage: 500
+  damage: 50
   bulletPrefab: {fileID: -7941449278952527284, guid: 4c2514791c784c24e8ad74e5b7e42f37, type: 3}
 --- !u!1 &462796292
 GameObject:
@@ -526,10 +526,10 @@ Camera:
   m_FocalLength: 50
   m_NormalizedViewPortRect:
     serializedVersion: 2
-    x: 0
-    y: 0.002057613
-    width: 0.99999994
-    height: 0.9958847
+    x: 0.0010266941
+    y: 0.0020533882
+    width: 0.9979466
+    height: 0.99383986
   near clip plane: 0.3
   far clip plane: 1000
   field of view: 34
@@ -1910,10 +1910,10 @@ Camera:
   m_FocalLength: 50
   m_NormalizedViewPortRect:
     serializedVersion: 2
-    x: 0
-    y: 0.002057613
-    width: 0.99999994
-    height: 0.9958847
+    x: 0.0010266941
+    y: 0.0020533882
+    width: 0.9979466
+    height: 0.99383986
   near clip plane: 0.3
   far clip plane: 1000
   field of view: 60
@@ -2104,7 +2104,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &1120194010
 Transform:
   m_ObjectHideFlags: 0
@@ -2155,7 +2155,7 @@ MonoBehaviour:
   fireRate: 15
   fireForce: 30
   randomness: 10
-  damage: 10
+  damage: 15
   bulletPrefab: {fileID: -7941449278952527284, guid: d1f452759dfba354396cb2e151b93ca2, type: 3}
 --- !u!1 &1241004833
 GameObject:
@@ -2202,6 +2202,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   currentRoomNum: 1
+  currentRoom: {fileID: 0}
   roomPrefabs:
   - {fileID: 1618386388123724881, guid: a18128e80b6da714898fad36cfd5f3e8, type: 3}
   - {fileID: 1618386388123724881, guid: 3a68c82c736b2d84397f3d94a8d5c64e, type: 3}
@@ -2925,7 +2926,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   canShoot: 1
   gunPivot: {fileID: 369984730}
-  gun: {fileID: 447743760}
+  gun: {fileID: 1120194010}
 --- !u!114 &1885756645
 MonoBehaviour:
   m_ObjectHideFlags: 0
