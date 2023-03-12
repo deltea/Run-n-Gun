@@ -6,6 +6,7 @@ public class FlyingEnemy : MonoBehaviour
 {
 
     public float abovePlayerOffset = 1;
+    public float enemySpeed = 0.3f;
     public EnemyBullet bulletPrefab;
     public float delay = 1;
     public float groupDelay = 0.1f;
@@ -17,6 +18,7 @@ public class FlyingEnemy : MonoBehaviour
     public Transform rightWing;
     public Transform leftWing;
     public LayerMask playerLayer;
+
     private float speed = 0.2f;
 
     Transform player;
@@ -57,7 +59,7 @@ public class FlyingEnemy : MonoBehaviour
                     Instantiate(bulletPrefab.gameObject, transform.position, Quaternion.LookRotation(Vector3.forward, Quaternion.identity * direction.normalized));
                     yield return new WaitForSeconds(groupDelay);
                 }
-                speed = 3 / VariableManager.Instance.enemySpeed;
+                speed = enemySpeed;
             } else
             {
                 yield return null;

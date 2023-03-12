@@ -28,8 +28,8 @@ public class FollowCamera : MonoBehaviour
             float halfHeight = cam.orthographicSize;
             float halfWidth = cam.aspect * halfHeight;
 
-            x = Mathf.Clamp(x, -bounds.x + halfWidth, bounds.x - halfWidth);
-            y = Mathf.Clamp(y, -bounds.y + halfHeight, bounds.y - halfHeight);
+            // x = Mathf.Clamp(x, -bounds.x + halfWidth, bounds.x - halfWidth);
+            // y = Mathf.Clamp(y, -bounds.y + halfHeight, bounds.y - halfHeight);
 
             Vector3 mousePosition = Camera.main.ScreenToWorldPoint(Mouse.current.position.ReadValue());
             Vector3 direction = mousePosition - transform.position;
