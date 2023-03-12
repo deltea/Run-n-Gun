@@ -6,6 +6,7 @@ public class RoomsManager : MonoBehaviour
 {
 
     public int currentRoomNum = 1;
+    public Room currentRoom;
     public GameObject[] roomPrefabs;
 
     #region Singleton

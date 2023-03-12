@@ -384,7 +384,7 @@ MonoBehaviour:
   fireRate: 5
   fireForce: 50
   randomness: 0
-  damage: 50
+  damage: 500
   bulletPrefab: {fileID: -7941449278952527284, guid: 4c2514791c784c24e8ad74e5b7e42f37, type: 3}
 --- !u!1 &462796292
 GameObject:
@@ -2201,6 +2201,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 31798e0c7e075f44886624951de84739, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  currentRoomNum: 1
   roomPrefabs:
   - {fileID: 1618386388123724881, guid: a18128e80b6da714898fad36cfd5f3e8, type: 3}
   - {fileID: 1618386388123724881, guid: 3a68c82c736b2d84397f3d94a8d5c64e, type: 3}
