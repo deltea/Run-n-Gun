@@ -8,6 +8,9 @@ public class RoomsManager : MonoBehaviour
     [HideInInspector] public int currentRoomNum = 0;
     [HideInInspector] public Room currentRoom;
     public GameObject[] roomPrefabs;
+    public GameObject[] minibossRoomPrefabs;
+    public GameObject bossRoomPrefab;
+    public GameObject choosingRoom;
     
     Transform player;
     FollowCamera cam;
@@ -30,10 +33,19 @@ public class RoomsManager : MonoBehaviour
 
     public void CreateRoom() {
         currentRoomNum++;
+        GameObject roomPrefab = roomPrefabs[Random.Range(0, roomPrefabs.Length)];
+
+        if (currentRoomNum == 5)
+        {
+            print("Miniboss fight");
+            roomPrefab = minibossRoomPrefabs[Random.Range(0, minibossRoomPrefabs.Length)];
+        } else if (currentRoomNum == 10) {
+            roomPrefab = bossRoomPrefab;
+        }
 
         if (currentRoom != null) Destroy(currentRoom.gameObject);
 
-        GameObject newRoom = Instantiate(roomPrefabs[Random.Range(0, roomPrefabs.Length)], Vector3.zero, Quaternion.identity);
+        GameObject newRoom = Instantiate(roomPrefab, Vector3.zero, Quaternion.identity);
         currentRoom = newRoom.GetComponent<Room>();
 
         foreach (Bit bit in GameObject.FindObjectsOfType<Bit>())
