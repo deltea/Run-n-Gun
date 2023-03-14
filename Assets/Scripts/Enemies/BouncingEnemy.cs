@@ -6,9 +6,11 @@ public class BouncingEnemy : MonoBehaviour
 {
 
     public EnemyBullet bulletPrefab;
+    public Transform gun;
     public float delay = 5;
     public float pause = 0.5f;
     public float enemySpeed = 10;
+    public float gunRotationSmoothing = 0.1f;
 
     private Vector2 lastVelocity;
 
@@ -23,6 +25,11 @@ public class BouncingEnemy : MonoBehaviour
 
     void Update() {
         enemyBody.velocity = enemyBody.velocity.normalized * enemySpeed;
+        gun.rotation = Quaternion.Lerp(gun.rotation, Quaternion.LookRotation(Vector3.forward, Quaternion.identity * (enemyBody.velocity == Vector2.zero ? -lastVelocity : -enemyBody.velocity)), gunRotationSmoothing);
+    }
+
+    void LateUpdate() {
+
     }
 
     private IEnumerator ShootRoutine() {

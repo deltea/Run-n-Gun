@@ -14,9 +14,12 @@ public class FollowCamera : MonoBehaviour
     Camera cam;
     Transform player;
 
+    void Awake() {
+        player = GameObject.FindGameObjectWithTag("Player").transform;
+    }
+
     void Start() {
         cam = Camera.main;
-        player = GameObject.FindGameObjectWithTag("Player").transform;
     }
 
     void FixedUpdate() {
@@ -36,6 +39,10 @@ public class FollowCamera : MonoBehaviour
 
             transform.position = new Vector3(x, y, -10) + direction.normalized * mouseFollow;
         }
+    }
+
+    public void ResetCamera() {
+        transform.position = player.position;
     }
 
     void OnDrawGizmosSelected() {

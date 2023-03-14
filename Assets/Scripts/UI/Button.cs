@@ -10,8 +10,8 @@ public class Button : MonoBehaviour, IPointerEnterHandler, IPointerExitHandler, 
     public float pressedScale = 0.8f;
     public float scaleSmoothing = 0.2f;
 
-    [System.NonSerialized] public bool pressing = false;
-    [System.NonSerialized] public bool hovering = false;
+    [HideInInspector] public bool pressing = false;
+    [HideInInspector] public bool hovering = false;
 
     private float targetScale = 1;
 

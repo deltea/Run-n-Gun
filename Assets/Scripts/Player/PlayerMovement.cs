@@ -13,13 +13,13 @@ public class PlayerMovement : MonoBehaviour
     public float acceleration = 500;
     public float decceleration = 800;
     public float airDecceleration = 100;
-    [System.NonSerialized] public float direction = 0;
+    [HideInInspector] public float direction = 0;
 
     [Header("Jumping")]
     public bool canJump = true;
     public float jumpHeight = 800;
-    [System.NonSerialized] public bool isGrounded;
-    [System.NonSerialized] public bool isFalling;
+    [HideInInspector] public bool isGrounded;
+    [HideInInspector] public bool isFalling;
     private bool isOverlappingGround;
     private bool isTouchingGround;
     private bool jumping;

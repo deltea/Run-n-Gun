@@ -9,7 +9,7 @@ public class PlayerShooting : MonoBehaviour
     public bool canShoot = true;
     public Transform gunPivot;
     public Transform gun;
-    [System.NonSerialized] public Gun currentGun;
+    [HideInInspector] public Gun currentGun;
 
     private bool firing;
     private float nextTimeToFire;

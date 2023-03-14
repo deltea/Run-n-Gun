@@ -5,7 +5,7 @@ using UnityEngine;
 public class Bullet : MonoBehaviour
 {
 
-    [System.NonSerialized] public Gun gun;
+    [HideInInspector] public Gun gun;
 
     void Start() {
         gun = PlayerShooting.Instance.currentGun;

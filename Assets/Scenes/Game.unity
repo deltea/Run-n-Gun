@@ -216,7 +216,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &358870347
 Transform:
   m_ObjectHideFlags: 0
@@ -527,9 +527,9 @@ Camera:
   m_NormalizedViewPortRect:
     serializedVersion: 2
     x: 0
-    y: 0
-    width: 1
-    height: 1
+    y: 0.002057613
+    width: 0.99999994
+    height: 0.9958847
   near clip plane: 0.3
   far clip plane: 1000
   field of view: 34
@@ -1911,9 +1911,9 @@ Camera:
   m_NormalizedViewPortRect:
     serializedVersion: 2
     x: 0
-    y: 0
-    width: 1
-    height: 1
+    y: 0.002057613
+    width: 0.99999994
+    height: 0.9958847
   near clip plane: 0.3
   far clip plane: 1000
   field of view: 60
@@ -2104,7 +2104,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &1120194010
 Transform:
   m_ObjectHideFlags: 0
@@ -2201,10 +2201,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 31798e0c7e075f44886624951de84739, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  currentRoomNum: 1
+  currentRoomNum: 0
   currentRoom: {fileID: 0}
   roomPrefabs:
   - {fileID: 1618386388123724881, guid: a18128e80b6da714898fad36cfd5f3e8, type: 3}
+  - {fileID: 1618386388123724881, guid: ff361e8dc3ad20b4f80b61caa618c663, type: 3}
 --- !u!1 &1250521256
 GameObject:
   m_ObjectHideFlags: 0
@@ -2925,7 +2926,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   canShoot: 1
   gunPivot: {fileID: 369984730}
-  gun: {fileID: 1120194010}
+  gun: {fileID: 358870347}
+  currentGun: {fileID: 0}
 --- !u!114 &1885756645
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2943,8 +2945,11 @@ MonoBehaviour:
   acceleration: 500
   decceleration: 800
   airDecceleration: 100
+  direction: 0
   canJump: 1
   jumpHeight: 800
+  isGrounded: 0
+  isFalling: 0
   coyoteTime: 0.4
   fallGravityMultiplier: 2.5
   groundCheckSize: 0.9
@@ -3042,7 +3047,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1885756642}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 5.3, z: 0}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1.2, y: 1.2, z: 1.2}
   m_ConstrainProportionsScale: 1
   m_Children:

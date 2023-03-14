@@ -5,11 +5,12 @@ using UnityEngine;
 public class RoomsManager : MonoBehaviour
 {
 
-    public int currentRoomNum = 1;
-    public Room currentRoom;
+    [HideInInspector] public int currentRoomNum = 0;
+    [HideInInspector] public Room currentRoom;
     public GameObject[] roomPrefabs;
     
     Transform player;
+    FollowCamera cam;
 
     #region Singleton
     
@@ -23,6 +24,7 @@ public class RoomsManager : MonoBehaviour
 
     void Start() {
         player = GameObject.FindGameObjectWithTag("Player").transform;
+        cam = Camera.main.GetComponent<FollowCamera>();
         CreateRoom();
     }
 
@@ -40,6 +42,7 @@ public class RoomsManager : MonoBehaviour
         }
 
         player.position = currentRoom.playerSpawnPoint.position;
+        cam.ResetCamera();
     }
 
 }

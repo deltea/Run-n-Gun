@@ -144,6 +144,8 @@ MonoBehaviour:
   maxHealth: 200
   health: 200
   bitPrefab: {fileID: 4413527660240524, guid: 0166670fa209dc4419f73ef578d73d87, type: 3}
+  bitsDropMin: 3
+  bitsDropMax: 6
   healthBarPrefab: {fileID: 7046488496458160177, guid: c7dae3441445d2042ba8768258ea4397, type: 3}
   healthBarOffsetY: 1.7
 --- !u!114 &7104606576530801196
@@ -320,7 +322,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 7104606577672530852}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 1.0099999, z: 0}
+  m_LocalPosition: {x: 0, y: 0.9, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
