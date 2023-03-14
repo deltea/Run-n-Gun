@@ -94,7 +94,6 @@ GameObject:
   m_Component:
   - component: {fileID: 69108125109002550}
   - component: {fileID: 6934236575543084028}
-  - component: {fileID: 69108125109002549}
   - component: {fileID: 69108125109002548}
   m_Layer: 0
   m_Name: Door
@@ -131,19 +130,6 @@ SortingGroup:
   m_SortingLayerID: -35026375
   m_SortingLayer: -1
   m_SortingOrder: 0
---- !u!114 &69108125109002549
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 69108125109002551}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f69c0b49c8903714d999dfc760cb308f, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  connectedDoor: {fileID: 0}
 --- !u!61 &69108125109002548
 BoxCollider2D:
   m_ObjectHideFlags: 0

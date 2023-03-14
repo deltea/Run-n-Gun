@@ -8,6 +8,8 @@ public class RoomsManager : MonoBehaviour
     public int currentRoomNum = 1;
     public Room currentRoom;
     public GameObject[] roomPrefabs;
+    
+    Transform player;
 
     #region Singleton
     
@@ -19,15 +21,25 @@ public class RoomsManager : MonoBehaviour
     
     #endregion
 
-    public void CreateRoom(Room clearedRoom) {
-        currentRoomNum++;
-        GameObject newRoom = Instantiate(roomPrefabs[Random.Range(0, roomPrefabs.Length)], Random.insideUnitCircle.normalized * 200, Quaternion.identity);
-        Room room = newRoom.GetComponent<Room>();
+    void Start() {
+        player = GameObject.FindGameObjectWithTag("Player").transform;
+        CreateRoom();
+    }
 
-        Door newEntranceDoor = room.entranceDoor;
-        Door oldExitDoor = clearedRoom.exitDoor;
-        newEntranceDoor.connectedDoor = oldExitDoor;
-        oldExitDoor.connectedDoor = newEntranceDoor;
+    public void CreateRoom() {
+        currentRoomNum++;
+
+        if (currentRoom != null) Destroy(currentRoom.gameObject);
+
+        GameObject newRoom = Instantiate(roomPrefabs[Random.Range(0, roomPrefabs.Length)], Vector3.zero, Quaternion.identity);
+        currentRoom = newRoom.GetComponent<Room>();
+
+        foreach (Bit bit in GameObject.FindObjectsOfType<Bit>())
+        {
+            Destroy(bit.gameObject);
+        }
+
+        player.position = currentRoom.playerSpawnPoint.position;
     }
 
 }

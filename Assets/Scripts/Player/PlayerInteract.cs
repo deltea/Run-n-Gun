@@ -6,12 +6,12 @@ using UnityEngine.InputSystem;
 public class PlayerInteract : MonoBehaviour
 {
 
-    Door doorTouching;
+    GameObject doorTouching;
 
     void OnTriggerEnter2D(Collider2D trigger) {
         if (trigger.CompareTag("Door"))
         {
-            doorTouching = trigger.GetComponent<Door>();
+            doorTouching = trigger.gameObject;
         }
     }
 
@@ -25,7 +25,7 @@ public class PlayerInteract : MonoBehaviour
     void OnInteract() {
         if (doorTouching != null)
         {
-            doorTouching.GoThrough();
+            RoomsManager.Instance.CreateRoom();
         }
     }
 
