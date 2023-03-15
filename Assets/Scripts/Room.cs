@@ -10,6 +10,7 @@ public class Room : MonoBehaviour
     public Transform playerSpawnPoint;
     public Transform bounds;
     public LayerMask roomsLayer;
+    public Vector2 size = new Vector2(20, 10);
 
     private int enemyCount;
 

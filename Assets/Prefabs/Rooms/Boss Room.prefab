@@ -491,7 +491,7 @@ GameObject:
   - component: {fileID: 1618386388123724882}
   - component: {fileID: 5644499656544353226}
   m_Layer: 12
-  m_Name: Choosing
+  m_Name: Boss Room
   m_TagString: Room
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

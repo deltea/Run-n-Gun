@@ -35,11 +35,11 @@ public class RoomsManager : MonoBehaviour
         currentRoomNum++;
         GameObject roomPrefab = roomPrefabs[Random.Range(0, roomPrefabs.Length)];
 
-        if (currentRoomNum == 5)
+        if (currentRoomNum == 5 && minibossRoomPrefabs != null)
         {
             print("Miniboss fight");
             roomPrefab = minibossRoomPrefabs[Random.Range(0, minibossRoomPrefabs.Length)];
-        } else if (currentRoomNum == 10) {
+        } else if (currentRoomNum == 10 && bossRoomPrefab != null) {
             roomPrefab = bossRoomPrefab;
         }
 
@@ -55,6 +55,7 @@ public class RoomsManager : MonoBehaviour
 
         player.position = currentRoom.playerSpawnPoint.position;
         cam.ResetCamera();
+        cam.bounds = currentRoom.size;
     }
 
 }

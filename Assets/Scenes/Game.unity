@@ -2205,10 +2205,15 @@ MonoBehaviour:
   currentRoom: {fileID: 0}
   roomPrefabs:
   - {fileID: 1618386388123724881, guid: a18128e80b6da714898fad36cfd5f3e8, type: 3}
-  - {fileID: 1618386388123724881, guid: ff361e8dc3ad20b4f80b61caa618c663, type: 3}
-  minibossRoomPrefabs: []
-  bossRoomPrefab: {fileID: 0}
-  choosingRoom: {fileID: 0}
+  - {fileID: 1618386388123724881, guid: 17b404b03d095ab4ca429f6c729dde15, type: 3}
+  - {fileID: 1618386388123724881, guid: 65dc235fc09ac0a4f8974a01d1ab2091, type: 3}
+  - {fileID: 1618386388123724881, guid: 939ea308b22041a4cb7ced91636574bb, type: 3}
+  minibossRoomPrefabs:
+  - {fileID: 1618386388123724881, guid: 17b404b03d095ab4ca429f6c729dde15, type: 3}
+  - {fileID: 1618386388123724881, guid: 65dc235fc09ac0a4f8974a01d1ab2091, type: 3}
+  - {fileID: 1618386388123724881, guid: 939ea308b22041a4cb7ced91636574bb, type: 3}
+  bossRoomPrefab: {fileID: 1618386388123724881, guid: c37fa39dce00f1247a477ccdc15d603d, type: 3}
+  choosingRoom: {fileID: 1618386388123724881, guid: aa8759de934f4c649a90f9d07da4247c, type: 3}
 --- !u!1 &1250521256
 GameObject:
   m_ObjectHideFlags: 0
@@ -3262,5 +3267,5 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   isFollowing: 1
   smoothing: 0.1
-  mouseFollow: 0.1
+  mouseFollow: 0
   bounds: {x: 31, y: 20}
