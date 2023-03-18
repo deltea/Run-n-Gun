@@ -5,12 +5,11 @@ using UnityEngine;
 public class RoomsManager : MonoBehaviour
 {
 
-    [HideInInspector] public int currentRoomNum = 0;
+    public int currentRoomNum = 0;
     [HideInInspector] public Room currentRoom;
     public GameObject[] roomPrefabs;
     public GameObject[] minibossRoomPrefabs;
     public GameObject bossRoomPrefab;
-    public GameObject choosingRoom;
     
     Transform player;
     FollowCamera cam;

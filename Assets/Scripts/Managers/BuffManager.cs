@@ -10,23 +10,21 @@ public enum Buffs
 public class BuffManager : MonoBehaviour
 {
 
-    // Changable variables
+    public GameObject crystalPrefab;
 
     private Dictionary<Buffs, string> buffDescriptions = new Dictionary<Buffs, string>();
 
+    #region Singleton
+    
     static public BuffManager Instance = null;
-
     void Awake() {
-        if (Instance == null) {
-            Instance = this;
-            DontDestroyOnLoad(gameObject);
-        } else if (Instance != this) {
-            Destroy(gameObject);
-        }
+        if (Instance == null) Instance = this;
+        else if (Instance != this) Destroy(gameObject);
     }
+    
+    #endregion
 
     void Start() {
-        // Populate descriptions
         buffDescriptions.Add(Buffs.Helper, "Summon a helper to attack enemies");
     }
 
@@ -40,6 +38,11 @@ public class BuffManager : MonoBehaviour
         {
             case Buffs.Helper: { break; }
         }
+    }
+
+    public void SpawnCrystals(float spacing) {
+        Instantiate(crystalPrefab, Vector3.up * 3 + Vector3.left * spacing, Quaternion.identity);
+        Instantiate(crystalPrefab, Vector3.up * 3 + Vector3.right * spacing, Quaternion.identity);
     }
 
 }

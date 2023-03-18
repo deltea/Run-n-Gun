@@ -112,6 +112,8 @@ MonoBehaviour:
   maxHealth: 150
   health: 150
   bitPrefab: {fileID: 4413527660240524, guid: 0166670fa209dc4419f73ef578d73d87, type: 3}
+  bitsDropMin: 10
+  bitsDropMax: 20
   healthBarPrefab: {fileID: 7046488496458160177, guid: c7dae3441445d2042ba8768258ea4397, type: 3}
   healthBarOffsetY: 1
 --- !u!114 &637877539253072708
@@ -127,6 +129,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   abovePlayerOffset: 3
+  enemySpeed: 0.3
   bulletPrefab: {fileID: -4706764990558245476, guid: 230023d2d45fedb4989dba292c65bf49, type: 3}
   delay: 1.5
   groupDelay: 0.2

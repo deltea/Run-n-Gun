@@ -24,7 +24,13 @@ public class Room : MonoBehaviour
 
     public void ClearedRoom() {
         print("Activate doors");
-        door.gameObject.SetActive(true);
+        if (RoomsManager.Instance.currentRoomNum == 5 || RoomsManager.Instance.currentRoomNum == 10)
+        {
+            BuffManager.Instance.SpawnCrystals(10);
+        } else
+        {
+            door.gameObject.SetActive(true);
+        }
     }
 
     public void RemoveEnemy() {

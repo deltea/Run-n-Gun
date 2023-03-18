@@ -216,7 +216,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &358870347
 Transform:
   m_ObjectHideFlags: 0
@@ -738,6 +738,7 @@ Transform:
   - {fileID: 1396924863}
   - {fileID: 568686257}
   - {fileID: 1241004834}
+  - {fileID: 1043151526}
   m_Father: {fileID: 0}
   m_RootOrder: 7
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -1839,6 +1840,51 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1001853434}
   m_CullTransparentMesh: 1
+--- !u!1 &1043151525
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1043151526}
+  - component: {fileID: 1043151527}
+  m_Layer: 0
+  m_Name: Buff Manager
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1043151526
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1043151525}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 543710758}
+  m_RootOrder: 3
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1043151527
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1043151525}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ee2708ab38ec3ea44b379b36afd6c6de, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  crystalPrefab: {fileID: 565221723225439444, guid: 4a0904f2ba712ae4f89e64ef66a90b8a, type: 3}
 --- !u!1 &1077926054
 GameObject:
   m_ObjectHideFlags: 0
@@ -2104,7 +2150,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &1120194010
 Transform:
   m_ObjectHideFlags: 0
@@ -2201,19 +2247,15 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 31798e0c7e075f44886624951de84739, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  currentRoomNum: 0
+  currentRoomNum: 4
   currentRoom: {fileID: 0}
   roomPrefabs:
-  - {fileID: 1618386388123724881, guid: a18128e80b6da714898fad36cfd5f3e8, type: 3}
   - {fileID: 1618386388123724881, guid: 17b404b03d095ab4ca429f6c729dde15, type: 3}
-  - {fileID: 1618386388123724881, guid: 65dc235fc09ac0a4f8974a01d1ab2091, type: 3}
-  - {fileID: 1618386388123724881, guid: 939ea308b22041a4cb7ced91636574bb, type: 3}
   minibossRoomPrefabs:
   - {fileID: 1618386388123724881, guid: 17b404b03d095ab4ca429f6c729dde15, type: 3}
   - {fileID: 1618386388123724881, guid: 65dc235fc09ac0a4f8974a01d1ab2091, type: 3}
   - {fileID: 1618386388123724881, guid: 939ea308b22041a4cb7ced91636574bb, type: 3}
   bossRoomPrefab: {fileID: 1618386388123724881, guid: c37fa39dce00f1247a477ccdc15d603d, type: 3}
-  choosingRoom: {fileID: 1618386388123724881, guid: aa8759de934f4c649a90f9d07da4247c, type: 3}
 --- !u!1 &1250521256
 GameObject:
   m_ObjectHideFlags: 0
@@ -2934,7 +2976,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   canShoot: 1
   gunPivot: {fileID: 369984730}
-  gun: {fileID: 358870347}
+  gun: {fileID: 1120194010}
   currentGun: {fileID: 0}
 --- !u!114 &1885756645
 MonoBehaviour:

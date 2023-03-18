@@ -283,8 +283,8 @@ MonoBehaviour:
   maxHealth: 100
   health: 100
   bitPrefab: {fileID: 4413527660240524, guid: 0166670fa209dc4419f73ef578d73d87, type: 3}
-  bitsDropMin: 3
-  bitsDropMax: 6
+  bitsDropMin: 10
+  bitsDropMax: 20
   healthBarPrefab: {fileID: 7046488496458160177, guid: c7dae3441445d2042ba8768258ea4397, type: 3}
   healthBarOffsetY: 1.5
 --- !u!114 &3849456647287421718
