@@ -216,7 +216,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &358870347
 Transform:
   m_ObjectHideFlags: 0
@@ -382,7 +382,7 @@ MonoBehaviour:
   gunKickRotationRandomness: 0
   firePoint: {fileID: 2122229533}
   fireRate: 1
-  fireForce: 50
+  fireForce: 60
   randomness: 0
   damage: 50
   bulletPrefab: {fileID: -7941449278952527284, guid: 4c2514791c784c24e8ad74e5b7e42f37, type: 3}
@@ -456,6 +456,7 @@ GameObject:
   - component: {fileID: 519420031}
   - component: {fileID: 519420029}
   - component: {fileID: 519420030}
+  - component: {fileID: 8973998269633331409}
   - component: {fileID: 519420033}
   - component: {fileID: 519420035}
   - component: {fileID: 8973998269633331408}
@@ -527,14 +528,14 @@ Camera:
   m_NormalizedViewPortRect:
     serializedVersion: 2
     x: 0
-    y: 0.002057613
+    y: 0
     width: 0.99999994
-    height: 0.9958847
+    height: 0.99999994
   near clip plane: 0.3
   far clip plane: 1000
   field of view: 34
   orthographic: 1
-  orthographic size: 10.083333
+  orthographic size: 10.125
   m_Depth: 0
   m_CullingMask:
     serializedVersion: 2
@@ -582,9 +583,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_ComponentVersion: 1
-  m_AssetsPPU: 12
-  m_RefResolutionX: 200
-  m_RefResolutionY: 200
+  m_AssetsPPU: 8
+  m_RefResolutionX: 150
+  m_RefResolutionY: 150
   m_CropFrame: 0
   m_GridSnapping: 2
   m_UpscaleRT: 0
@@ -1577,7 +1578,7 @@ SpriteRenderer:
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
-  m_MaskInteraction: 0
+  m_MaskInteraction: 2
   m_SpriteSortPoint: 0
 --- !u!1 &989617059
 GameObject:
@@ -1884,6 +1885,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ee2708ab38ec3ea44b379b36afd6c6de, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  buffObjects:
+  - {fileID: 8588217646779864323, guid: 028ecdea4d2753d43af3d00e4717fc77, type: 3}
   crystalPrefab: {fileID: 565221723225439444, guid: 4a0904f2ba712ae4f89e64ef66a90b8a, type: 3}
 --- !u!1 &1077926054
 GameObject:
@@ -1957,14 +1960,14 @@ Camera:
   m_NormalizedViewPortRect:
     serializedVersion: 2
     x: 0
-    y: 0.002057613
+    y: 0
     width: 0.99999994
-    height: 0.9958847
+    height: 0.99999994
   near clip plane: 0.3
   far clip plane: 1000
   field of view: 60
   orthographic: 1
-  orthographic size: 10.083333
+  orthographic size: 8.1
   m_Depth: 1
   m_CullingMask:
     serializedVersion: 2
@@ -2008,9 +2011,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_ComponentVersion: 1
-  m_AssetsPPU: 12
-  m_RefResolutionX: 200
-  m_RefResolutionY: 200
+  m_AssetsPPU: 10
+  m_RefResolutionX: 150
+  m_RefResolutionY: 150
   m_CropFrame: 0
   m_GridSnapping: 2
   m_UpscaleRT: 0
@@ -2150,7 +2153,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &1120194010
 Transform:
   m_ObjectHideFlags: 0
@@ -2976,7 +2979,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   canShoot: 1
   gunPivot: {fileID: 369984730}
-  gun: {fileID: 1120194010}
+  gun: {fileID: 358870347}
   currentGun: {fileID: 0}
 --- !u!114 &1885756645
 MonoBehaviour:
@@ -3311,3 +3314,19 @@ MonoBehaviour:
   smoothing: 0.1
   mouseFollow: 0
   bounds: {x: 31, y: 20}
+--- !u!114 &8973998269633331409
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 519420028}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 56666c5a40171f54783dd416a44f42bf, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_EventMask:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_MaxRayIntersections: 0

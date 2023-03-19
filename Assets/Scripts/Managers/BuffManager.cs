@@ -2,17 +2,11 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public enum Buffs
-{
-    Helper,
-}
-
 public class BuffManager : MonoBehaviour
 {
 
+    public BuffObject[] buffObjects;
     public GameObject crystalPrefab;
-
-    private Dictionary<Buffs, string> buffDescriptions = new Dictionary<Buffs, string>();
 
     #region Singleton
     
@@ -24,19 +18,14 @@ public class BuffManager : MonoBehaviour
     
     #endregion
 
-    void Start() {
-        buffDescriptions.Add(Buffs.Helper, "Summon a helper to attack enemies");
-    }
-
-    public void RandomBuff(out Buffs buff, out string buffDescription) {
+    public void RandomBuff(out Buffs buff) {
         buff = (Buffs)Random.Range(0, System.Enum.GetValues(typeof(Buffs)).Length);
-        buffDescription = buffDescriptions[buff].ToString();
     }
 
     public void ActivateBuff(Buffs buff) {
         switch (buff)
         {
-            case Buffs.Helper: { break; }
+            case Buffs.Dart: { break; }
         }
     }
 

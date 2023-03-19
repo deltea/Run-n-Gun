@@ -5,6 +5,7 @@ using UnityEngine;
 public class Crystal : MonoBehaviour
 {
 
+    public BuffObject[] buffObjects;
     public float health = 100;
 
     Shake shake;
@@ -23,6 +24,8 @@ public class Crystal : MonoBehaviour
 
     private void Die() {
         Destroy(gameObject);
+        BuffManager.Instance.RandomBuff(out Buffs randomBuff);
+        Instantiate(BuffManager.Instance.buffObjects[Random.Range(0, BuffManager.Instance.buffObjects.Length)], transform.position, Quaternion.identity);
     }
 
     void OnCollisionEnter2D(Collision2D collision) {
