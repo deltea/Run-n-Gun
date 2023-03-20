@@ -6,8 +6,8 @@ using UnityEngine.UI;
 public class PlayerHealth : MonoBehaviour
 {
 
-    public int maxHealth = 100;
-    public int health = 100;
+    [SerializeField] private int maxHealth = 100;
+    [SerializeField] private int health = 100;
     
     #region Singleton
     

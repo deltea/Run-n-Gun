@@ -15,10 +15,16 @@ public enum BuffClass
 public class BuffObject : MonoBehaviour
 {
 
+    [SerializeField] private float hoverSpeed = 1;
+    [SerializeField] private float hoverMagnitude = 1;
     public Buffs buff;
     public BuffClass buffClass;
     public string objectName;
     [TextArea] public string description;
+
+    void Update() {
+        transform.position = Vector2.up * Mathf.Sin(Time.time * hoverSpeed) * hoverMagnitude;
+    }
 
     void OnTriggerEnter2D(Collider2D trigger) {
         if (trigger.CompareTag("Player"))

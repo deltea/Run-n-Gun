@@ -11,7 +11,7 @@ public enum ShakeMode
 public class Shake : MonoBehaviour
 {
 
-    public ShakeMode shakeMode = ShakeMode.Fixed;
+    [SerializeField] private ShakeMode shakeMode = ShakeMode.Fixed;
     private float shakeDuration = 0f;
     private float shakeMagnitude = 0.7f;
     private float dampingSpeed = 1.0f;

@@ -6,7 +6,7 @@ using UnityEngine.InputSystem;
 public class PlayerInteract : MonoBehaviour
 {
 
-    GameObject doorTouching;
+    private GameObject doorTouching;
 
     void OnTriggerEnter2D(Collider2D trigger) {
         if (trigger.CompareTag("Door"))
@@ -25,8 +25,7 @@ public class PlayerInteract : MonoBehaviour
     void OnInteract() {
         if (doorTouching != null)
         {
-            RoomsManager.Instance.CreateRoom();
+            SceneLoader.Instance.BackToMap();
         }
     }
-
 }

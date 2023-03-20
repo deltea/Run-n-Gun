@@ -6,10 +6,10 @@ using UnityEngine.InputSystem;
 public class FollowCamera : MonoBehaviour
 {
 
-    public bool isFollowing = true;
-    public float smoothing = 0.1f;
-    public float mouseFollow = 1;
-    public Vector2 bounds;
+    [SerializeField] private bool isFollowing = true;
+    [SerializeField] private float smoothing = 0.1f;
+    [SerializeField] private float mouseFollow = 1;
+    [SerializeField] private Vector2 bounds;
 
     Camera cam;
     Transform player;

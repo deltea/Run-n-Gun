@@ -5,8 +5,8 @@ using UnityEngine;
 public class GunPivot : MonoBehaviour
 {
 
-    public Transform player;
-    public float smoothing = 0.2f;
+    [SerializeField] private Transform player;
+    [SerializeField] private float smoothing = 0.2f;
 
     void FixedUpdate() {
         transform.position = Vector2.Lerp(transform.position, player.position, smoothing);

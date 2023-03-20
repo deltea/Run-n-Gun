@@ -6,9 +6,9 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 1
-    path: Assets/Scenes/Choosing.unity
-    guid: 8c9cfa26abfee488c85f1582747f6a02
+    path: Assets/Scenes/Map.unity
+    guid: ce89e530fba02d441a30f32fe5120c9b
   - enabled: 1
-    path: Assets/Scenes/Game.unity
+    path: Assets/Scenes/Bouncing Boss.unity
     guid: e69c1d03547393941b5318042153338c
   m_configObjects: {}

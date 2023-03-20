@@ -66,17 +66,6 @@
                     "isPartOfComposite": false
                 },
                 {
-                    "name": "",
-                    "id": "f5f43987-23c1-45ae-b4de-d99e8b6c29fb",
-                    "path": "<Keyboard>/upArrow",
-                    "interactions": "",
-                    "processors": "",
-                    "groups": "",
-                    "action": "Jump",
-                    "isComposite": false,
-                    "isPartOfComposite": false
-                },
-                {
                     "name": "A/D",
                     "id": "7cac9157-7d5b-4b90-89bd-a224e2c411a9",
                     "path": "1DAxis",
@@ -102,39 +91,6 @@
                     "name": "positive",
                     "id": "4b5ac342-3fac-4b85-8d14-a5d111a40b1e",
                     "path": "<Keyboard>/d",
-                    "interactions": "",
-                    "processors": "",
-                    "groups": "",
-                    "action": "Movement",
-                    "isComposite": false,
-                    "isPartOfComposite": true
-                },
-                {
-                    "name": "Left/Right",
-                    "id": "9c1e2f86-d932-4a2a-8fee-557baaf37b82",
-                    "path": "1DAxis",
-                    "interactions": "",
-                    "processors": "",
-                    "groups": "",
-                    "action": "Movement",
-                    "isComposite": true,
-                    "isPartOfComposite": false
-                },
-                {
-                    "name": "negative",
-                    "id": "aca2e862-e110-485b-b89a-8d63a9b918d7",
-                    "path": "<Keyboard>/leftArrow",
-                    "interactions": "",
-                    "processors": "",
-                    "groups": "",
-                    "action": "Movement",
-                    "isComposite": false,
-                    "isPartOfComposite": true
-                },
-                {
-                    "name": "positive",
-                    "id": "fb13f77d-f107-43a8-80b5-52ac19be05e5",
-                    "path": "<Keyboard>/rightArrow",
                     "interactions": "",
                     "processors": "",
                     "groups": "",

@@ -6,10 +6,10 @@ using TMPro;
 public class BitManager : MonoBehaviour
 {
 
-    public int bits;
+    private int bits;
     public TMP_Text bitText;
-    public float smoothing = 0.2f;
-    public float gainAnimation = 10;
+    [SerializeField] private float smoothing = 0.2f;
+    [SerializeField] private float gainAnimation = 10;
 
     Vector2 originalPosition;
 

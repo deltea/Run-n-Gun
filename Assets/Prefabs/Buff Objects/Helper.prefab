@@ -312,6 +312,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b8feda893ddcad9418eb6af4140feb63, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  hoverSpeed: 3
+  hoverMagnitude: 0.5
   buff: 0
   buffClass: 0
   objectName: Help!
