@@ -6,8 +6,8 @@ using UnityEngine.InputSystem;
 public class MousePointer : MonoBehaviour
 {
 
-    public float normalSize = 1;
-    public float clickingSize = 0.5f;
+    [SerializeField] private float normalSize = 1;
+    [SerializeField] private float clickingSize = 0.5f;
 
     Camera cam;
 

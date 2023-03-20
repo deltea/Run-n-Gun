@@ -5,7 +5,7 @@ using UnityEngine;
 public class Crystal : MonoBehaviour
 {
 
-    public BuffObject[] buffObjects;
+    [SerializeField] private BuffObject[] buffObjects;
     public float health = 100;
 
     Shake shake;

@@ -9,17 +9,16 @@ public class PlayerMovement : MonoBehaviour
 
     [Header("Running")]
     public bool canRun = true;
-    public float maxSpeed = 10;
-    public float acceleration = 500;
-    public float decceleration = 800;
-    public float airDecceleration = 100;
-    [HideInInspector] public float direction = 0;
+    [SerializeField] private float maxSpeed = 10;
+    [SerializeField] private float acceleration = 500;
+    [SerializeField] private float airDecceleration = 100;
+    private float direction = 0;
 
     [Header("Jumping")]
     public bool canJump = true;
-    public float jumpHeight = 800;
-    [HideInInspector] public bool isGrounded;
-    [HideInInspector] public bool isFalling;
+    [SerializeField] private float jumpHeight = 800;
+    [HideInInspector] private bool isGrounded;
+    [HideInInspector] private bool isFalling;
     private bool isOverlappingGround;
     private bool isTouchingGround;
     private bool jumping;
@@ -27,27 +26,27 @@ public class PlayerMovement : MonoBehaviour
     [Header("Better Platforming")]
 
     [Range(0, 0.4f)]
-    public float coyoteTime = 0.2f;
+    [SerializeField] private float coyoteTime = 0.2f;
     private float coyoteTimeCounter = 0;
 
     [Header("Extra Gravity")]
 
     [Range(1, 3)]
-    public float fallGravityMultiplier = 2.5f;
+    [SerializeField] private float fallGravityMultiplier = 2.5f;
     private float normalGravity;
 
     [Header("Ground Check")]
 
-    public float groundCheckSize = 0.47f;
-    public LayerMask groundLayer;
+    [SerializeField] private float groundCheckSize = 0.47f;
+    [SerializeField] private LayerMask groundLayer;
 
     [Header("Animation")]
-    public Transform graphics;
-    public float tilt = 10;
-    public float tiltSmoothing = 0.2f;
-    public Vector2 landSquash;
-    public Vector2 jumpSquash;
-    public float scaleSmoothing = 0.1f;
+    [SerializeField] private Transform graphics;
+    [SerializeField] private float tilt = 10;
+    [SerializeField] private float tiltSmoothing = 0.2f;
+    [SerializeField] private Vector2 landSquash;
+    [SerializeField] private Vector2 jumpSquash;
+    [SerializeField] private float scaleSmoothing = 0.1f;
 
     private float targetRotation;
 

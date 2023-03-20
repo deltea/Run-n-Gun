@@ -5,9 +5,9 @@ using UnityEngine;
 public class Bit : MonoBehaviour
 {
 
-    public float startForce = 5;
-    public float smoothing = 0.05f;
-    public Vector2 range;
+    [SerializeField] private float startForce = 5;
+    [SerializeField] private float smoothing = 0.05f;
+    [SerializeField] private Vector2 range;
 
     private bool collected = false;
 

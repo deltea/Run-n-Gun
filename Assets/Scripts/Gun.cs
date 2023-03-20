@@ -5,10 +5,10 @@ using UnityEngine;
 public class Gun : MonoBehaviour
 {
 
-    public float gunKick = 0.2f;
-    public float gunKickSmoothing = 0.2f;
-    public float gunKickRandomnes = 0.1f;
-    public float gunKickRotationRandomness = 90;
+    [SerializeField] private float gunKick = 0.2f;
+    [SerializeField] private float gunKickSmoothing = 0.2f;
+    [SerializeField] private float gunKickRandomnes = 0.1f;
+    [SerializeField] private float gunKickRotationRandomness = 90;
     public Transform firePoint;
 
     [Header("Stats")]

@@ -6,7 +6,7 @@ public class BuffManager : MonoBehaviour
 {
 
     public BuffObject[] buffObjects;
-    public GameObject crystalPrefab;
+    [SerializeField] private GameObject crystalPrefab;
 
     #region Singleton
     
@@ -29,9 +29,8 @@ public class BuffManager : MonoBehaviour
         }
     }
 
-    public void SpawnCrystals(float spacing) {
-        Instantiate(crystalPrefab, Vector3.up * 3 + Vector3.left * spacing, Quaternion.identity);
-        Instantiate(crystalPrefab, Vector3.up * 3 + Vector3.right * spacing, Quaternion.identity);
+    public void SpawnCrystals(Vector3 position) {
+        Instantiate(crystalPrefab, position, Quaternion.identity);
     }
 
 }

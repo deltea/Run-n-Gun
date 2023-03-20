@@ -7,9 +7,9 @@ public class PlayerShooting : MonoBehaviour
 {
 
     public bool canShoot = true;
-    public Transform gunPivot;
-    public Transform gun;
-    [HideInInspector] public Gun currentGun;
+    public Gun currentGun;
+    [SerializeField] private Transform gunPivot;
+    [SerializeField] private Transform gun;
 
     private bool firing;
     private float nextTimeToFire;
